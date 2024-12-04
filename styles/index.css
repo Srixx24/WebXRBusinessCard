@@ -29,24 +29,49 @@ body { margin: 0; overflow: hidden; }
 }
 .cloud {
     position: absolute;
+    width: 10rem;
+    height: 10rem;
     background-size: contain;
     background-repeat: no-repeat;
-    background-color: transparent;
-    animation: move-cloud 15s linear infinite, strobe 2s infinite;
+    border-style: none;
+    animation: move-cloud 15s linear infinite;
+    overflow: hidden; /* Ensure halftone doesn't overflow */
+}
+
+.halftone {
+    position: relative; /* Needed for absolute positioning of ::after */
+}
+
+.halftone::after {
+    
+    content: '';
+    position: absolute;
+    inset: 0; /* Cover the entire cloud */
+    background-image: radial-gradient(
+        circle at center,
+        rgba(0, 0, 0, 1) var(--dotSize),
+        transparent 0
+    );
+    background-size: 1rem 1rem; /* Size of the dots */
+    background-position: 0 0, 0.675rem 0.675rem;
+    mask-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Fade effect */
+    animation: strobe 2s infinite;
+    opacity: 1;
+    pointer-events: none;
+}
+@keyframes strobe {
+    0% { background-color: rgba(255, 0, 0, 0.5); }
+    14% { background-color: rgba(255, 127, 0, 0.5); }
+    28% { background-color: rgba(255, 255, 0, 0.5); }
+    42% { background-color: rgba(0, 255, 0, 0.5); }
+    57% { background-color: rgba(0, 0, 255, 0.5); }
+    71% { background-color: rgba(75, 0, 130, 0.5); }
+    85% { background-color: rgba(148, 0, 211, 0.5); }
+    100% { background-color: rgba(255, 0, 0, 0.5); }
 }
 @keyframes move-cloud {
     0% { transform: translateX(-150px); }
     100% { transform: translateX(100vw); }
-}
-@keyframes strobe {
-    0% { border-color: rgb(255, 0, 0); }
-    14% { border-color: rgb(255, 127, 0); }
-    28% { border-color: rgb(255, 255, 0); }
-    42% { border-color: rgb(0, 255, 0); }
-    57% { border-color: rgb(0, 0, 255); }
-    71% { border-color: rgb(75, 0, 130); }
-    85% { border-color: rgb(148, 0, 211); }
-    100% { border-color: rgb(255, 0, 0); }
 }
 .overlay {
     position: fixed;
