@@ -1,0 +1,45 @@
+{
+    "title": "Jackie Lovins WebXR Portfolio",
+    "description": "WebXR Business Card that allows an immersive experience of porfolio",
+    "projects": [
+        {
+            "title": "Hacksprint",
+            "description": "A custom Chrome extension featuring dynamic backgrounds, a weather widget, and more.",
+            "image": "Images/Project1.png",
+            "link": "https://github.com/Srixx24/Hacksprint",
+            "marker": "Markers/galaxy.patt"
+        },
+        {
+            "title": "3D Platformer",
+            "description": "An engaging 3D platformer built with Unity, featuring interactive environments.",
+            "image": "Images/Project2.png",
+            "link": "https://github.com/Srixx24/atlas-unity/tree/main/unity-audio",
+            "marker": "Markers/Boo.patt"
+        },
+        {
+            "title": "VR Physics game",
+            "description": "A VR game that incorporates realistic physics for immersive gameplay.",
+            "image": "Images/Project3.png",
+            "link": "https://github.com/Srixx24/atlas-unity-virtual-reality",
+            "marker": "Markers/Sword.patt"
+        },
+        {
+            "title": "AR Slingshot",
+            "description": "An AR slingshot game where players hunt slimes in real-world settings.",
+            "image": "Images/Project4.png",
+            "link": "https://github.com/Srixx24/atlas-unity/tree/main/unity-ar_slingshot_game",
+            "marker": "Markers/Slime boi.patt"
+        }
+    ],
+    "background": {
+        "color": "#800080",
+        "image": "Images/background.jpg"
+    },
+    "settings": {
+        "camera": {
+            "position": "0 1.6 0",
+            "look_controls": true
+        },
+        "default_locale": "en"
+    }
+}

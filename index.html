@@ -1,28 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>Hello WebXR!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Jackie Lovins WebXR Portfolio</title>
 
-  <!-- three.js -->
-  <script src="https://unpkg.com/three@0.126.0/build/three.js"></script>
+    <!-- Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="JS/transition.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
 </head>
 <body>
 
-<!-- Starting an immersive WebXR session requires user interaction.
-    We start this one with a simple button. -->
-<button onclick="activateXR()">Start Hello WebXR</button>
-<script>
-async function activateXR() {
-  // Add a canvas element and initialize a WebGL context that is compatible with WebXR.
-  const canvas = document.createElement("canvas");
-  document.body.appendChild(canvas);
-  const gl = canvas.getContext("webgl", {xrCompatible: true});
+<div class="overlay" id="overlay"></div>
+  
+<div class="welcome-screen" id="welcome-screen">
+    Welcome to my portfolio
+    <div id="cloud-container">
+      <div class="cloud" style="top: 10%; left: -100px; background-image: url('Cloud1.png');animation-delay: 5s;"></div>
+      <div class="cloud" style="top: 25%; left: -100px; background-image: url('Cloud4.png');"></div>
+      <div class="cloud" style="top: 35%; left: -100px; background-image: url('Cloud5.png');animation-delay: 3s;"></div>
+      <div class="cloud" style="top: 65%; left: -100px; background-image: url('Cloud3.png');animation-delay: 2s;"></div>
+      <div class="cloud" style="top: 85%; left: -100px; background-image: url('Cloud2.png');animation-delay: 4s;"></div>
+    </div>
+  </div>
 
-  // To be continued in upcoming steps.
-}
-</script>
+<div class="logo" id="logo">
+  <img src="Images/LovinsLogo.png" width="200">
+</div>
+
+<div class="socialLinks" id="socialLinks">
+  <div class="socialLink">
+    <a role="button" href="https://github.com/Srixx24/">
+      <img src="Images/github.png" alt="GitHub" />
+    </a>
+    <span>GitHub</span>
+  </div>
+  <div class="socialLink">
+    <a role="button" href="https://www.linkedin.com/in/jackielovins/">
+      <img src="Images/linkedin.png" alt="LinkedIn" />
+    </a>
+    <span>LinkedIn</span>
+  </div>
+  <div class="socialLink">
+    <a role="button" href="https://srixx24.github.io/">
+      <img src="Images/website.png" alt="Personal Website" />
+    </a>
+    <span>Personal Website</span>
+  </div>
+  <div class="socialLink">
+    <a role="button" href="mailto:jacolynlovins@gmail.com">
+      <img src="Images/email.png" alt="GMail" />
+    </a>
+    <span>GMail</span>
+  </div>
+</div>
+
+<div id="project-container">
+  <!-- Project information to be dynamically inserted here -->
+</div>
+
+<!-- A-Frame Scene -->
+<a-scene embedded arjs>
+    <a-entity camera position="0 1.6 0" look-controls></a-entity>
+    <a-plane rotation="-90 0 0" width="100" height="100" color="black"></a-plane>
+    <a-sky color="#800080"></a-sky>
+
+    <!-- Stars -->
+    <a-entity id="star-container">
+    </a-entity>
+
 </body>
 </html>
