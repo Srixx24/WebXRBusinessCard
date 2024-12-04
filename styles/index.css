@@ -90,7 +90,7 @@ body { margin: 0; overflow: hidden; }
     transition: opacity 1s ease;
 }
 a-scene {
-    visibility: hidden;
+    display: none;
 }
 .socialLinks {
     display: flex; /* Aligns the social links in a row */
