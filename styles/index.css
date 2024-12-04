@@ -37,13 +37,10 @@ body { margin: 0; overflow: hidden; }
     animation: move-cloud 15s linear infinite;
     overflow: hidden; /* Ensure halftone doesn't overflow */
 }
-
 .halftone {
     position: relative; /* Needed for absolute positioning of ::after */
 }
-
 .halftone::after {
-    
     content: '';
     position: absolute;
     inset: 0; /* Cover the entire cloud */
