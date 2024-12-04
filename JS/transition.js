@@ -1,18 +1,24 @@
 // Responsible for transition between welcome page and main page
 
-const overlay = document.getElementById('overlay');
-if (overlay) {
-    overlay.addEventListener('click', function() {
-        const welcomeScreen = document.getElementById('welcome-screen');
-        const logo = document.getElementById('logo');
-        if (welcomeScreen && logo) {
-            welcomeScreen.style.opacity = '0';
-            logo.style.opacity = '0';
-            setTimeout(() => {
-                welcomeScreen.style.display = 'none';
-                logo.style.display = 'none';
-                overlay.style.display = 'none';
-            }, 1000);
-        }
-    });
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const overlay = document.getElementById('overlay');
+    const welcomeScreen = document.getElementById('welcome-screen');
+    const logo = document.getElementById('logo'); // Ensure the logo has this ID in the HTML
+
+    if (overlay) {
+        overlay.addEventListener('click', function() {
+            if (welcomeScreen && logo) {
+                // Fade out
+                welcomeScreen.style.opacity = '0';
+                logo.style.opacity = '0';
+                
+                // Wait for the transition to complete before hiding elements
+                setTimeout(() => {
+                    welcomeScreen.style.display = 'none';
+                    logo.style.display = 'none';
+                    overlay.style.display = 'none';
+                }, 1000); // Match this duration with your CSS transition duration
+            }
+        });
+    }
+});

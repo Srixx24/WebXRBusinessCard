@@ -86,6 +86,9 @@ body { margin: 0; overflow: hidden; }
     justify-content: center;
     margin-top: 52%;
 }
+#welcome-screen, #logo {
+    transition: opacity 1s ease; /* Adjust duration and easing as needed */
+}
 .socialLinks {
     display: flex; /* Aligns the social links in a row */
     justify-content: space-around;
