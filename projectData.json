@@ -5,30 +5,30 @@
         {
             "title": "Hacksprint",
             "description": "A custom Chrome extension featuring dynamic backgrounds, a weather widget, and more.",
-            "image": "Images/Project1.png",
+            "image": "Images/ChromeExt1.png",
             "link": "https://github.com/Srixx24/Hacksprint",
-            "marker": "Markers/galaxy.patt"
+            "marker": "Markers/pattern-galaxy.patt"
         },
         {
             "title": "3D Platformer",
             "description": "An engaging 3D platformer built with Unity, featuring interactive environments.",
-            "image": "Images/Project2.png",
+            "image": "Images/Platformer.png",
             "link": "https://github.com/Srixx24/atlas-unity/tree/main/unity-audio",
-            "marker": "Markers/Boo.patt"
+            "marker": "Markers/pattern-Boo.patt"
         },
         {
-            "title": "VR Physics game",
-            "description": "A VR game that incorporates realistic physics for immersive gameplay.",
-            "image": "Images/Project3.png",
-            "link": "https://github.com/Srixx24/atlas-unity-virtual-reality",
-            "marker": "Markers/Sword.patt"
+            "title": "VR 360 Video",
+            "description": "A VR experience developed for Meta Quest in a Tropical theme.",
+            "image": "Images/360Vid.png",
+            "link": "https://github.com/Srixx24/atlas-unity-virtual-reality/tree/main/360-video",
+            "marker": "Markers/pattern-Trees.patt"
         },
         {
             "title": "AR Slingshot",
             "description": "An AR slingshot game where players hunt slimes in real-world settings.",
-            "image": "Images/Project4.png",
+            "image": "Images/TitleScreen.png",
             "link": "https://github.com/Srixx24/atlas-unity/tree/main/unity-ar_slingshot_game",
-            "marker": "Markers/Slime boi.patt"
+            "marker": "Markers/pattern-Slime Boi.patt"
         }
     ],
     "background": {
