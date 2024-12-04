@@ -89,6 +89,9 @@ body { margin: 0; overflow: hidden; }
 #welcome-screen, #logo {
     transition: opacity 1s ease;
 }
+a-scene {
+    display: none; /* or use visibility: hidden; */
+}
 .socialLinks {
     display: flex; /* Aligns the social links in a row */
     justify-content: space-around;
