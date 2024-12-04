@@ -3,8 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.getElementById('overlay');
     const welcomeScreen = document.getElementById('welcome-screen');
-    const logo = document.getElementById('logo'); // Ensure the logo has this ID in the HTML
-
+    const logo = document.getElementById('logo');
     if (overlay) {
         overlay.addEventListener('click', function() {
             if (welcomeScreen && logo) {
@@ -17,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     welcomeScreen.style.display = 'none';
                     logo.style.display = 'none';
                     overlay.style.display = 'none';
-                }, 1000); // Match this duration with your CSS transition duration
+                }, 1000);
             }
         });
     }

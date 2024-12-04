@@ -87,7 +87,7 @@ body { margin: 0; overflow: hidden; }
     margin-top: 52%;
 }
 #welcome-screen, #logo {
-    transition: opacity 1s ease; /* Adjust duration and easing as needed */
+    transition: opacity 1s ease;
 }
 .socialLinks {
     display: flex; /* Aligns the social links in a row */
