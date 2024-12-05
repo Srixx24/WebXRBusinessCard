@@ -1,4 +1,4 @@
-// Responsible for transition between welcome page and main page
+// Responsible for transition between welcome page, main page, and events
 
 document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.getElementById('overlay');
@@ -15,9 +15,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 welcomeScreen.style.display = 'none';
                 logo.style.display = 'none';
                 overlay.style.display = 'none';
-
-                // Show the A-Frame scene
                 scene.style.display = 'block';
             }, 1000);
         });
+
+    // Click event listeners
+    document.getElementById('project-highlights').addEventListener('click', () => {
+        console.log('Project Highlights clicked');
+        document.getElementById('project-highlights').setAttribute('visible', 'false');
+        // Add Trigger event later
+    });
+
+    document.getElementById('about-me').addEventListener('click', () => {
+        console.log('About Me clicked');
+        document.getElementById('about-me').setAttribute('visible', 'false');
+        // Add Trigger event later
+    });
+
+    document.getElementById('connect-with-me').addEventListener('click', () => {
+        console.log('Connect With Me clicked');
+        document.getElementById('connect-with-me').setAttribute('visible', 'false');
+        // Add Trigger event later
+    });
 });

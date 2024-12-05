@@ -1,0 +1,23 @@
+{
+    "name": "WebXRBusinessCard",
+    "version": "1.0.0",
+    "description": "A web-based AR experience to designed to reimagine a business card",
+    "repository": {
+      "type": "git",
+      "url": "https://srixx24.github.io/WebXRBusinessCard/"
+    },
+    "keywords": [
+      "webxr",
+      "webvr",
+      "aframe-vr",
+      "aframe-component",
+      "aframe",
+      "unity",
+      "vr"
+    ],
+    "author": "Jackie Lovins <jacolynlovins@gmail.com> (https://github.com/Srixx24)",
+    "bugs": {
+      "url": "https://srixx24.github.io/WebXRBusinessCard/"
+    },
+    "homepage": "https://github.com/Srixx24/WebXRBusinessCard"
+  }

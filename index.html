@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Jackie Lovins WebXR Portfolio</title>
+    <title>Jackie Lovins Business Card</title>
 
     <!-- Links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,64 +15,29 @@
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://srixx24.github.io/WebXRBusinessCard/Packages/A-Frame_Environments/dist/aframe-environment-component.min.js"></script>
     <script src="JS/transition.js"></script>
+    <script src="JS/fetchBio.js"></script>
+    <script src="JS/fetchLinks.js"></script>
+    <script src="JS/fetchProjects.js"></script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="styles/index.css">
-    <style>
-      .socialLinks {
-          display: none; /* Hide the social links by default */
-      }
-    </style>
 </head>
 <body>
 
 <div class="overlay" id="overlay"></div>
   
 <div class="welcome-screen" id="welcome-screen">
-
   <div style="display: flex;flex-direction: column;align-items: center;">
     <div>Welcome to my portfolio</div>
     <div><img id="logo" src="Images/LovinsLogo.png" width="200" alt="Lovins Logo"></div>
   </div>
-
-    <div id="cloud-container">
-      <div class="cloud halftone" style="top: 10%; left: -1000px; background-image: url('Images/Cloud1.png');animation-delay: 5s;"></div>
-      <div class="cloud halftone" style="top: 25%; left: -1000px; background-image: url('Images/Cloud4.png');"></div>
-      <div class="cloud halftone" style="top: 45%; left: -1000px; background-image: url('Images/Cloud5.png');animation-delay: 3s;"></div>
-      <div class="cloud halftone" style="top: 65%; left: -1000px; background-image: url('Images/Cloud3.png');animation-delay: 2s;"></div>
-      <div class="cloud halftone" style="top: 85%; left: -1000px; background-image: url('Images/Cloud2.png');animation-delay: 4s;"></div>
-    </div>
+  <div id="cloud-container">
+    <div class="cloud halftone" style="top: 10%; left: -1000px; background-image: url('Images/Cloud1.png');animation-delay: 5s;"></div>
+    <div class="cloud halftone" style="top: 25%; left: -1000px; background-image: url('Images/Cloud4.png');"></div>
+    <div class="cloud halftone" style="top: 45%; left: -1000px; background-image: url('Images/Cloud5.png');animation-delay: 3s;"></div>
+    <div class="cloud halftone" style="top: 65%; left: -1000px; background-image: url('Images/Cloud3.png');animation-delay: 2s;"></div>
+    <div class="cloud halftone" style="top: 85%; left: -1000px; background-image: url('Images/Cloud2.png');animation-delay: 4s;"></div>
   </div>
-
-<div class="socialLinks" id="socialLinks">
-  <div class="socialLink">
-    <a role="button" href="https://github.com/Srixx24/">
-      <img src="Images/github.png" alt="GitHub" />
-    </a>
-    <span>GitHub</span>
-  </div>
-  <div class="socialLink">
-    <a role="button" href="https://www.linkedin.com/in/jackielovins/">
-      <img src="Images/Linkedin.png" alt="LinkedIn" />
-    </a>
-    <span>LinkedIn</span>
-  </div>
-  <div class="socialLink">
-    <a role="button" href="https://srixx24.github.io/">
-      <img src="Images/website.png" alt="Personal Website" />
-    </a>
-    <span>Personal Website</span>
-  </div>
-  <div class="socialLink">
-    <a role="button" href="mailto:jacolynlovins@gmail.com">
-      <img src="Images/Gmail.png" alt="GMail" />
-    </a>
-    <span>GMail</span>
-  </div>
-</div>
-
-<div id="project-container">
-  <!-- Project information to be dynamically inserted here -->
 </div>
 
 <!-- A-Frame Scene -->
@@ -85,7 +50,27 @@
     <a-entity id="stars" scale="0.89 0.51 1"></a-entity>
   </a-entity>
   <a-entity position="0 1.6 0" camera="userHeight:1.6" wasd-controls="speed: 0.5" look-controls=""></a-entity>
-</a-scene>
 
+  <!-- Project Highlights -->
+  <a-entity id="project-highlights" position="-2 0.1 -5" geometry="primitive: ring; radiusInner: 0.5; radiusOuter: 0.6" material="color: #FF5733; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable">
+    <a-text value="Project Highlights" align="center" position="0 0 0.01" color="#FFFFFF"></a-text>
+  </a-entity>
+
+  <!-- About Me -->
+  <a-entity id="about-me" position="0 0.1 -5" geometry="primitive: ring; radiusInner: 0.5; radiusOuter: 0.6" material="color: #33FF57; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable">
+    <a-text value="About Me" align="center" position="0 0 0.01" color="#FFFFFF"></a-text>
+  </a-entity>
+
+  <!-- Connect With Me -->
+  <a-entity id="connect-with-me" position="2 0.1 -5" geometry="primitive: ring; radiusInner: 0.5; radiusOuter: 0.6" material="color: #3357FF; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable">
+    <a-text value="Connect With Me" align="center" position="0 0 0.01" color="#FFFFFF"></a-text>
+  </a-entity>
+
+  <!-- Content Containers-->
+  <a-entity id="project-container" position="0 0 -5" visible="false"></a-entity>
+  <a-entity id="bio-container" position="0 0 -5" visible="false"></a-entity>
+  <a-entity id="links-container" position="0 0 -5" visible="false"></a-entity>
+
+</a-scene>
 </body>
 </html>

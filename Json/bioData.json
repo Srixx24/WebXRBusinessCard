@@ -1,0 +1,23 @@
+{
+    "title": "Jackie Lovins",
+    "description": "About Me",
+    "projects": [
+        {
+            "title": "Hacksprint",
+            "description": "I am a passionate developer focusing on AR/VR and game development.",
+            "link": "Resume link to be added",
+            "image": "add my pic also find a pic for background here vvvv"
+        }
+    ],
+    "background": {
+        "color": "#800080",
+        "image": "Images/background.jpg"
+    },
+    "settings": {
+        "camera": {
+            "position": "0 1.6 0",
+            "look_controls": true
+        },
+        "default_locale": "en"
+    }
+}

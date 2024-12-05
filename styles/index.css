@@ -97,22 +97,19 @@ a-scene {
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
 .socialLink {
     text-align: center;
     margin: 10px; /* Adjusts spacing between links */
 }
-
 .socialLinks img {
     width: 40px;
     height: auto; /* Maintain aspect ratio */
     transition: transform 0.2s; /* Smooth scaling effect */
 }
-
 .socialLinks img:hover {
     transform: scale(1.1); /* Slightly enlarge on hover */
 }
-
+/* Come back to work on this, mobile setting look like trash*/
 @media (max-width: 600px) {
     .welcome-screen {
         font-size: 2em; /* Smaller font on mobile */
@@ -121,7 +118,6 @@ a-scene {
         width: 150px; /* Adjust logo size for mobile */
     }
 }
-
 .Cross-Browser {
     -webkit-transition: all 0.3s ease; /* Safari */
     -moz-transition: all 0.3s ease; /* Firefox */

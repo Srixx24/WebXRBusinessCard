@@ -1,6 +1,6 @@
 {
-    "title": "Jackie Lovins WebXR Portfolio",
-    "description": "WebXR Business Card that allows an immersive experience of porfolio",
+    "title": "Jackie Lovins Portfolio",
+    "description": "A highlight of my porfolio",
     "projects": [
         {
             "title": "Hacksprint",
@@ -32,8 +32,7 @@
         }
     ],
     "background": {
-        "color": "#800080",
-        "image": "Images/background.jpg"
+        "color": "rgba(128, 0, 128, 0)"
     },
     "settings": {
         "camera": {

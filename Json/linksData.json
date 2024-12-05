@@ -1,0 +1,34 @@
+{
+    "title": "Connect With Me",
+    "description": "Lets network on social media",
+    "projects": [
+        {
+            "title": "Github",
+            "description": "My main Github",
+            "image": "Images/gitgub.png",
+            "link": "https://github.com/Srixx24/"
+        },
+        {
+            "title": "LinkedIn",
+            "description": "My LinkedIn profile",
+            "image": "Images/Linkedin.png",
+            "link": "https://www.linkedin.com/in/jackielovins/"
+        },
+        {
+            "title": "GMail",
+            "description": "Feel Free to send me an email with any questions.",
+            "image": "Images/Gmail.png",
+            "link": "mailto:jacolynlovins@gmail.com"
+        }
+    ],
+    "background": {
+        "color": "rgba(128, 0, 128, 0)"
+    },
+    "settings": {
+        "camera": {
+            "position": "0 1.6 0",
+            "look_controls": true
+        },
+        "default_locale": "en"
+    }
+}
