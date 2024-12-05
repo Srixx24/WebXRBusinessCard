@@ -16,8 +16,8 @@ function displayContact(contacts) {
     contacts.forEach(contact => {
         const contactElement = document.createElement('a-entity');
         contactElement.innerHTML = `
-            <h2>${contact.title}</h2>
-            <p>${contact.description}</p>
+            <h1>${contact.title}</h1>
+            <h3>${contact.description}</h3>
             <img src="${contact.image}" alt="${contact.title}">
             <a href="${contact.link}" target="_blank">View Links</a>
         `;
