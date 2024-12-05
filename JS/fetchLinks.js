@@ -1,4 +1,4 @@
-fetch('linksData.json')
+fetch('Json/linksData.json')
     .then(response => response.json())
     .then(data => {
         document.title = data.title; // Set the title
