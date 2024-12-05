@@ -7,13 +7,13 @@ fetch('Json/linksData.json')
         scene.setAttribute('background', `color: ${data.background.color};`);
 
         // Display links
-        displayLinks(data.links);
+        displayLinks(data.display);
     })
     .catch(error => console.error('Error fetching the JSON data:', error));
 
-function displayLinks(links) {
+function displayLinks(display) {
     const linksContainer = document.getElementById('links-container');
-    links.forEach(links => {
+    display.forEach(links => {
         const linksElement = document.createElement('a-entity');
         linksElement.innerHTML = `
             <h2>${links.title}</h2>
