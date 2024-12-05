@@ -1,11 +1,11 @@
 {
     "title": "Connect With Me",
     "description": "Lets network on social media",
-    "links": [
+    "contacts": [
         {
             "title": "Github",
             "description": "My main Github",
-            "image": "Images/gitgub.png",
+            "image": "Images/github.png",
             "link": "https://github.com/Srixx24/"
         },
         {

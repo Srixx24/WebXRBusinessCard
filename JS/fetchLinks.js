@@ -7,20 +7,20 @@ fetch('Json/linksData.json')
         scene.setAttribute('background', `color: ${data.background.color};`);
 
         // Display links
-        displayLinks(data.display);
+        displayContact(data.contacts);
     })
     .catch(error => console.error('Error fetching the JSON data:', error));
 
-function displayLinks(display) {
-    const linksContainer = document.getElementById('links-container');
-    display.forEach(links => {
-        const linksElement = document.createElement('a-entity');
-        linksElement.innerHTML = `
-            <h2>${links.title}</h2>
-            <p>${links.description}</p>
-            <img src="${links.image}" alt="${links.title}">
-            <a href="${links.link}" target="_blank">View links</a>
+function displayContact(contacts) {
+    const contactContainer = document.getElementById('contact-container');
+    contacts.forEach(contact => {
+        const contactElement = document.createElement('a-entity');
+        contactElement.innerHTML = `
+            <h2>${contact.title}</h2>
+            <p>${contact.description}</p>
+            <img src="${contact.image}" alt="${contact.title}">
+            <a href="${contact.link}" target="_blank">View Links</a>
         `;
-        linksContainer.appendChild(linksElement);
+        contactContainer.appendChild(contactElement);
     });
 }
