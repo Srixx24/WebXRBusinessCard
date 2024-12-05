@@ -14,7 +14,7 @@ fetch('Json/projectData.json')
 function displayProjects(projects) {
     const projectContainer = document.getElementById('project-container');
     projects.forEach(project => {
-        const projectElement = document.createElement('div');
+        const projectElement = document.createElement('a-entity');
         projectElement.innerHTML = `
             <h2>${project.title}</h2>
             <p>${project.description}</p>

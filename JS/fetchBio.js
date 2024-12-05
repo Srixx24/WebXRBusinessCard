@@ -13,11 +13,11 @@ fetch('Json/bioData.json')
 
 function displayBio(bio) {
     const bioContainer = document.getElementById('bio-container');
-    const bioElement = document.createElement('div');
+    const bioElement = document.createElement('a-entity');
     bioElement.innerHTML = `
         <h2>${bio.title}</h2>
         <p>${bio.description}</p>
-        <img src="${bio.image}" alt="${bio.title}" style="width: 100px; height: auto;">
+        <img src="${bio.image}" style="width: 100px; height: auto;">
         <a href="${bio.link}" target="_blank">View Resume</a>
     `;
     bioContainer.appendChild(bioElement);

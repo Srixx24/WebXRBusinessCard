@@ -1,9 +1,7 @@
 {
-    "title": "Jackie Lovins",
-    "description": "About Me",
-    "projects": [
+    "title": "About Me",
+    "bio": [
         {
-            "title": "About Me",
             "description": "I am a passionate developer focusing on AR/VR and game development.",
             "link": "Resume link to be added",
             "image": "add my pic also find a pic for background here vvvv"

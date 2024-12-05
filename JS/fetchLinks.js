@@ -14,7 +14,7 @@ fetch('Json/linksData.json')
 function displayLinks(links) {
     const linksContainer = document.getElementById('links-container');
     links.forEach(links => {
-        const linksElement = document.createElement('div');
+        const linksElement = document.createElement('a-entity');
         linksElement.innerHTML = `
             <h2>${links.title}</h2>
             <p>${links.description}</p>
