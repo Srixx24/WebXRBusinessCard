@@ -6,15 +6,5 @@
             "link": "https://docs.google.com/document/d/16DoOQhVb5LWtTK4UrSZPV47kmY2AYvT32YstNNjU4QI/edit?usp=sharing",
             "image": "Images/Headshot.png"
         }
-    ],
-    "background": {
-        "color": "#800080"
-    },
-    "settings": {
-        "camera": {
-            "position": "0 1.6 0",
-            "look_controls": true
-        },
-        "default_locale": "en"
-    }
+    ]
 }

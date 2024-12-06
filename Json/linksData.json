@@ -20,15 +20,5 @@
             "image": "Images/Gmail.png",
             "link": "mailto:jacolynlovins@gmail.com"
         }
-    ],
-    "background": {
-        "color": "rgba(128, 0, 128, 0)"
-    },
-    "settings": {
-        "camera": {
-            "position": "0 1.6 0",
-            "look_controls": true
-        },
-        "default_locale": "en"
-    }
+    ]
 }

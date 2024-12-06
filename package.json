@@ -4,7 +4,8 @@
     "description": "A web-based AR experience to designed to reimagine a business card",
     "repository": {
       "type": "git",
-      "url": "https://srixx24.github.io/WebXRBusinessCard/"
+      "url": "https://srixx24.github.io/WebXRBusinessCard/",
+      "default_locale": "en"
     },
     "keywords": [
       "webxr",
