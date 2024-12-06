@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handles click events and animations
     function handleClick(entity, dataContainerId) {
       entity.addEventListener('click', () => {
-        entity.setAttribute('animation', 'property: position; to: ' + entity.getAttribute('position').x + ' ' + (entity.getAttribute('position').y + 0.5) + ' ' + entity.getAttribute('position').z + '; dur: 300;');
+        entity.setAttribute('animation', 'property: position; to: ' + entity.getAttribute('position').x + ' ' + (entity.getAttribute('position').y + 1) + ' ' + entity.getAttribute('position').z + '; dur: 300;');
         entity.setAttribute('animation__scale', 'property: scale; to: 0.5 0.5 0.5; dur: 300;');
         // Hide after animation
         setTimeout(() => {
@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 300);
       });
     }
+    
     // Assign click events
     handleClick(projectHighlights, 'project-container');
     handleClick(aboutMe, 'bio-container');

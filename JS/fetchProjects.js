@@ -10,7 +10,6 @@ fetch('Json/projectData.json')
 
 function displayProjects(projects) {
     const projectContainer = document.getElementById('project-container');
-    projectContainer.setAttribute('visible', 'true'); 
 
     projects.forEach((project, index) => {
         const projectElement = document.createElement('a-entity');

@@ -10,7 +10,6 @@ fetch('Json/bioData.json')
 
 function displayBio(bio) {
     const bioContainer = document.getElementById('bio-container');
-    bioContainer.setAttribute('visible', 'true');
     const bioElement = document.createElement('a-entity');
     
     // Create a-text element for title

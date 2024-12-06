@@ -10,7 +10,6 @@ fetch('Json/linksData.json')
 
     function displayContact(contacts) {
         const contactContainer = document.getElementById('contact-container');
-        contactContainer.setAttribute('visible', 'true');
     
         contacts.forEach((contact, index) => {
             const contactElement = document.createElement('a-entity');
