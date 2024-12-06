@@ -49,7 +49,9 @@
     <a-sky radius="200" theta-length="110" position="0 0 9.091" material="sunPosition:0 -0.025853424423087495 -0.9996657443593832;"></a-sky>
     <a-entity id="stars" scale="0.89 0.51 1"></a-entity>
   </a-entity>
-  <a-entity position="0 1.6 0" camera="userHeight:1.6" look-controls="" rotation=""></a-entity>
+  <a-entity position="0 1.6 0" camera="userHeight:1.6" look-controls="" rotation="">
+    <a-cursor></a-cursor>
+  </a-entity>
 
   <!-- Project Highlights -->
   <a-entity id="project-highlights" position="-4 0.3 -3" rotation="0 50 0" geometry="primitive: ring; radiusInner: 0.8; radiusOuter: 1" material="color: #FF5733; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable">
