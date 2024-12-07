@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Handles click events and animations for ring
   function handleClick(entity, dataContainerId) {
       entity.addEventListener('click', () => {
-          // If a old tab is open, close it first
+          // If an old tab is open, close it first
           if (currentOpenContainer && currentOpenContainer !== entity) {
               const currentContainerId = containers[currentOpenContainer.id];
               const currentContainer = document.getElementById(currentContainerId);
