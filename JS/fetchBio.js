@@ -1,17 +1,24 @@
-fetch('Json/bioData.json')
-    .then(response => response.json())
-    .then(data => {
-        document.title = data.title; // Set the title
-        const scene = document.querySelector('a-scene');
-        // Display bio
-        displayBio(data.bio);
-    })
-    .catch(error => console.error('Error fetching the JSON data:', error));
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('Json/bioData.json')
+        .then(response => response.json())
+        .then(data => {
+            document.title = data.title; // Set the title
+            const scene = document.querySelector('a-scene');
+            // Display bio
+            displayBio(data.bio[0]);
+        })
+        .catch(error => console.error('Error fetching the JSON data:', error));
+});
 
 function displayBio(bio) {
     const bioContainer = document.getElementById('bio-container');
+    if (!bioContainer) {
+        console.error('Bio container not found');
+        return;
+    }
+
     const bioElement = document.createElement('a-entity');
-    
+
     // Create a-text element for title
     const titleText = document.createElement('a-text');
     titleText.setAttribute('value', bio.title);
