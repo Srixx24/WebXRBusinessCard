@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Animate the clicked ring
             entity.setAttribute('animation', `property: position; to: ${entity.getAttribute('position').x} ${entity.getAttribute('position').y + 1} ${entity.getAttribute('position').z}; dur: 300;`);
-            entity.setAttribute('animation__scale', 'property: scale; to: 0.5 0.5 0.5; dur: 300;');
+            entity.setAttribute('animation__scale', 'property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000;loop: true;');
 
             // Hide ring/show tab
             setTimeout(() => {
