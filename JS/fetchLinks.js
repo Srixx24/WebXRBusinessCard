@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             const scene = document.querySelector('a-scene');
             // Display links
-            displayContact(data.contacts);
+            displayContact(data.contacts[0]);
         })
         .catch(error => console.error('Error fetching the JSON data:', error));
 });
