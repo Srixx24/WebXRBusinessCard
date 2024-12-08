@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         function showProject(index) {
             const projectContainer = document.getElementById('project-container');
-            projectContainer.setAttribute('visible', 'true');
         
             // Clear previous project elements
             while (projectContainer.firstChild) {
@@ -45,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const descriptionText = document.createElement('a-text');
             descriptionText.setAttribute('value', project.description);
             descriptionText.setAttribute('color', '#000000');
-            descriptionText.setAttribute('position', '0 -0.5 0.1');
+            descriptionText.setAttribute('position', '-1.8 0.5 0.1');
             descriptionText.setAttribute('width', '3.5');
             descriptionText.setAttribute('height', '5');
             descriptionText.setAttribute('wrap-count', '40');
@@ -69,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.open(project.link, '_blank');
             });
         
-            // Append all elements to projectContainer
+            // Append all elements
             projectContainer.appendChild(titleText);
             projectContainer.appendChild(descriptionText);
             projectContainer.appendChild(imageElement);
@@ -77,9 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
             // Add instruction text
             const instructionText = document.createElement('a-text');
-            instructionText.setAttribute('value', 'Click for next project');
+            instructionText.setAttribute('value', 'Click anywhere for next project');
             instructionText.setAttribute('color', '#000000');
-            instructionText.setAttribute('position', '-1 -2.3 0.1');
+            instructionText.setAttribute('position', '-1.5 -2.3 0.1');
             projectContainer.appendChild(instructionText);
         }
         
