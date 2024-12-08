@@ -1,63 +1,100 @@
-// Set up links for Contacts container
-
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {  
     fetch('Json/linksData.json')
         .then(response => response.json())
         .then(data => {
+            document.title = data.title; // Set the title
             const scene = document.querySelector('a-scene');
-            // Display links
-            displayContact(data.contacts);
+            // Display contacts
+            displayContacts(data.contacts);
         })
         .catch(error => console.error('Error fetching the JSON data:', error));
-});
-
-function displayContact(data) {
-    const contacts = data.contacts;
-    const header = data.header;
-    const contactContainer = document.getElementById('contact-container');
-    if (!contactContainer) {
-        console.error('Contact container not found');
-        return;
-    }
-
-    while (contactContainer.firstChild) {
-        contactContainer.removeChild(contactContainer.firstChild);
-    }
-
-        const titleText = document.createElement('a-text');
-        titleText.setAttribute('value', header);
-        titleText.setAttribute('color', '#000000');
-        titleText.setAttribute('position', '-0.8 2 0');
-        contactContainer.appendChild(titleText);
-
-        const positions = [
-            { link: { name: 'Github', index: 0 }, image: contacts[0].image, linkPosition: '0.2 0.8 0', imagePosition: '-1 0.8 0.1' },
-            { link: { name: 'LinkedIn', index: 1 }, image: contacts[1].image, linkPosition: '0.2 -0.4 0', imagePosition: '-1 -0.4 0.1' },
-            { link: { name: 'Gmail', index: 2 }, image: contacts[2].image, linkPosition: '0.2 -1.6 0', imagePosition: '-1 -1.6 0.1' }
-        ];
-
-        positions.forEach(pos => {
-            // Create link text
+        let currentContactIndex = 0; // Track current contact
+        let contacts = []; // Store contacts
+        
+        function displayContactts(contactsData) {
+            contacts = contactsData;
+            const contactContainer = document.getElementById('contact-container');
+        
+            // Initial display
+            showContact(currentContactIndex);
+        
+            contactContainer.addEventListener('click', () => {
+                animateAndShowNextContact();
+            });
+        }
+        
+        function showContact(index) {
+            const contactContainer = document.getElementById('contact-container');
+        
+            // Clear previous contact elements
+            while (contactContainer.firstChild) {
+                contactContainer.removeChild(contactContainer.firstChild);
+            }
+        
+            const contact = contacts[index];
+        
+            // Create a-text elements for title
+            const titleText = document.createElement('a-text');
+            titleText.setAttribute('value', contact.title);
+            titleText.setAttribute('fontSize', '2');
+            titleText.setAttribute('color', '#000000');
+            titleText.setAttribute('position', '-0.8 2 0');
+        
+            // Create a-text element for description
+            const descriptionText = document.createElement('a-text');
+            descriptionText.setAttribute('value', contact.description);
+            descriptionText.setAttribute('color', '#000000');
+            descriptionText.setAttribute('position', '-1.8 0.5 0.1');
+            descriptionText.setAttribute('width', '3.5');
+            descriptionText.setAttribute('height', '5');
+            descriptionText.setAttribute('wrap-count', '40');
+        
+            // Create an image element
+            const imageElement = document.createElement('a-image');
+            imageElement.setAttribute('src', contact.image);
+            imageElement.setAttribute('position', '0 -0.9 0.1'); 
+            imageElement.setAttribute('width', '2');
+            imageElement.setAttribute('height', '1.5');
+        
+            // Create a link (as a-text)
             const linkText = document.createElement('a-text');
-            linkText.setAttribute('value', pos.link.name);
-            linkText.setAttribute('color', '#000000');
-            linkText.setAttribute('position', pos.linkPosition);
+            linkText.setAttribute('value', contact.linkName);
+            linkText.setAttribute('color', '#00FF00');
+            linkText.setAttribute('position', '-0.6 -2 0.1');
             linkText.setAttribute('class', 'clickable');
-    
+        
             // Listener for links
             linkText.addEventListener('click', () => {
-                window.open(contacts[pos.link.index].link, '_blank');
+                window.open(contact.link, '_blank');
             });
-    
-            // Create images
-            const image = document.createElement('a-image');
-            image.setAttribute('src', pos.image);
-            image.setAttribute('position', pos.imagePosition);
-            image.setAttribute('width', '1.5');
-            image.setAttribute('height', '1.2');
-    
-            // Append links and images
+        
+            // Append all elements
+            contactContainer.appendChild(titleText);
+            contactContainer.appendChild(descriptionText);
+            contactContainer.appendChild(imageElement);
             contactContainer.appendChild(linkText);
-            contactContainer.appendChild(image);
-        });
+        
+            // Add instruction text
+            const instructionText = document.createElement('a-text');
+            instructionText.setAttribute('value', 'Click anywhere for next page');
+            instructionText.setAttribute('color', '#000000');
+            instructionText.setAttribute('position', '-1.5 -2.3 0.1');
+            contactContainer.appendChild(instructionText);
+        }
+        
+        function animateAndShowNextContact() {
+            const contactContainer = document.getElementById('contact-container');
+            
+            // Animate closing and opening
+            contactContainer.setAttribute('animation', 'property: scale; to: 1 0 1; dur: 500; easing: easeInOutQuad;');
+            
+            setTimeout(() => {
+                currentContactIndex = (currentContactIndex + 1) % contacts.length; // Loop contacts
+                showContact(currentContactIndex);
+                
+                // Animate opening back
+                contactContainer.setAttribute('animation', 'property: scale; to: 1 1 1; dur: 500; easing: easeInOutQuad;');
+            }, 500); // Match the timeout with animation duration *Important*
+        }
     }
+);
