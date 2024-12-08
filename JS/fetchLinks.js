@@ -38,13 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
             titleText.setAttribute('value', contact.title);
             titleText.setAttribute('fontSize', '2');
             titleText.setAttribute('color', '#000000');
-            titleText.setAttribute('position', '-0.8 2 0');
+            titleText.setAttribute('position', '-0.9 2 0');
         
             // Create a-text element for description
             const descriptionText = document.createElement('a-text');
             descriptionText.setAttribute('value', contact.description);
             descriptionText.setAttribute('color', '#000000');
-            descriptionText.setAttribute('position', '-1.8 0.5 0.1');
+            descriptionText.setAttribute('position', '-1.2 -1 0.1');
             descriptionText.setAttribute('width', '3.5');
             descriptionText.setAttribute('height', '5');
             descriptionText.setAttribute('wrap-count', '40');
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Create an image element
             const imageElement = document.createElement('a-image');
             imageElement.setAttribute('src', contact.image);
-            imageElement.setAttribute('position', '0 -0.9 0.1'); 
+            imageElement.setAttribute('position', '0 0.5 0.1'); 
             imageElement.setAttribute('width', '2');
             imageElement.setAttribute('height', '1.5');
         
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const linkText = document.createElement('a-text');
             linkText.setAttribute('value', contact.linkName);
             linkText.setAttribute('color', '#00FF00');
-            linkText.setAttribute('position', '-0.6 -2 0.1');
+            linkText.setAttribute('position', '-0.4 -0.5 0.1');
             linkText.setAttribute('class', 'clickable');
         
             // Listener for links
