@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Create an image element
             const imageElement = document.createElement('a-image');
             imageElement.setAttribute('src', project.image);
-            imageElement.setAttribute('position', '0 -1 0'); 
+            imageElement.setAttribute('position', '0 -1 0.1'); 
             imageElement.setAttribute('width', '2');
             imageElement.setAttribute('height', '1.5');
         
