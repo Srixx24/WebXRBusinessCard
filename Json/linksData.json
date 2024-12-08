@@ -1,13 +1,16 @@
 {
     "contacts": [
         {
-            "link": "https://github.com/Srixx24/"
+            "link": "https://github.com/Srixx24/",
+            "image": "Image/github.png"
         },
         {
-            "link": "https://www.linkedin.com/in/jackielovins/"
+            "link": "https://www.linkedin.com/in/jackielovins/",
+            "image": "Image/Linkedin.png"
         },
         {
-            "link": "mailto:jacolynlovins@gmail.com"
+            "link": "mailto:jacolynlovins@gmail.com",
+            "image": "Image/Gmail.png"
         }
     ]
 }

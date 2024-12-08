@@ -39,6 +39,24 @@ function displayContact(contacts) {
         thirdLink.setAttribute('position', '0.2 -1.6 0');
         thirdLink.setAttribute('class', 'clickable');
 
+        const firstImage = document.createElement('a-image');
+        firstImage.setAttribute('src', project.image);
+        firstImage.setAttribute('position', '-1 0.8 0.1'); 
+        firstImage.setAttribute('width', '1.5');
+        firstImage.setAttribute('height', '1.2');
+
+        const secondImage = document.createElement('a-image');
+        secondImage.setAttribute('src', project.image);
+        secondImage.setAttribute('position', '-1 -0.4 0.1'); 
+        secondImage.setAttribute('width', '1.2');
+        secondImage.setAttribute('height', '0.8');
+
+        const thirdImage = document.createElement('a-image');
+        thirdImage.setAttribute('src', project.image);
+        thirdImage.setAttribute('position', '-1 -1.6 0.1'); 
+        thirdImage.setAttribute('width', '1.5');
+        thirdImage.setAttribute('height', '1.2');
+
         // Listener for links
         firstLink.addEventListener('click', () => {
             window.open(contacts[0].link, '_blank');
@@ -54,6 +72,9 @@ function displayContact(contacts) {
         contactContainer.appendChild(firstLink);
         contactContainer.appendChild(secondLink);
         contactContainer.appendChild(thirdLink);
+        contactContainer.appendChild(firstImage);
+        contactContainer.appendChild(secondImage);
+        contactContainer.appendChild(thirdImage);
 
         contactContainer.setAttribute('visible', 'true');
 }
