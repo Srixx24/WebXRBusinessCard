@@ -22,7 +22,7 @@ function displayContact(contacts) {
         contactContainer.removeChild(contactContainer.firstChild);
     }
         const firstLink = document.createElement('a-text');
-        firstLink.setAttribute('value', 'Github');
+        firstLink.setAttribute('value', 'Image/github.png');
         firstLink.setAttribute('color', '#000000');
         firstLink.setAttribute('position', '0.2 0.8 0');
         firstLink.setAttribute('class', 'clickable');

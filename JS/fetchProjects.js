@@ -38,19 +38,22 @@ document.addEventListener('DOMContentLoaded', () => {
             const titleText = document.createElement('a-text');
             titleText.setAttribute('value', project.title);
             titleText.setAttribute('fontSize', '2');
-            titleText.setAttribute('color', '#FFFFFF');
-            titleText.setAttribute('position', '0 0 0.1');
+            titleText.setAttribute('color', '#000000');
+            titleText.setAttribute('position', '-1.7 2 0');
         
             // Create a-text element for description
             const descriptionText = document.createElement('a-text');
             descriptionText.setAttribute('value', project.description);
-            descriptionText.setAttribute('color', '#FFFFFF');
+            descriptionText.setAttribute('color', '#000000');
             descriptionText.setAttribute('position', '0 -0.5 0.1');
+            descriptionText.setAttribute('width', '3.5');
+            descriptionText.setAttribute('height', '5');
+            descriptionText.setAttribute('wrap-count', '40');
         
             // Create an image element
             const imageElement = document.createElement('a-image');
             imageElement.setAttribute('src', project.image);
-            imageElement.setAttribute('position', '0 -1 0.1'); 
+            imageElement.setAttribute('position', '0 -0.9 0.1'); 
             imageElement.setAttribute('width', '2');
             imageElement.setAttribute('height', '1.5');
         
@@ -58,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const linkText = document.createElement('a-text');
             linkText.setAttribute('value', 'View Project');
             linkText.setAttribute('color', '#00FF00');
-            linkText.setAttribute('position', '0 -1.5 0.1');
+            linkText.setAttribute('position', '-0.6 -2 0.1');
             linkText.setAttribute('class', 'clickable');
         
             // Listener for links
@@ -75,8 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Add instruction text
             const instructionText = document.createElement('a-text');
             instructionText.setAttribute('value', 'Click for next project');
-            instructionText.setAttribute('color', '#FFFFFF');
-            instructionText.setAttribute('position', '0 -2 0.1');
+            instructionText.setAttribute('color', '#000000');
+            instructionText.setAttribute('position', '-1 -2.3 0.1');
             projectContainer.appendChild(instructionText);
         }
         
