@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             const scene = document.querySelector('a-scene');
             // Display links
-            displayContact(data.contacts[0]);
+            displayContact(data.contacts);
         })
         .catch(error => console.error('Error fetching the JSON data:', error));
 });
@@ -41,20 +41,17 @@ function displayContact(contacts) {
 
         // Listener for links
         firstLink.addEventListener('click', () => {
-            window.open(contact.link, '_blank');
+            window.open(contacts[0].link, '_blank');
         });
         secondLink.addEventListener('click', () => {
-            window.open(contact.link, '_blank');
+            window.open(contacts[1].link, '_blank');
         });
         thirdLink.addEventListener('click', () => {
-            window.open(contact.link, '_blank');
+            window.open(contacts[2].link, '_blank');
         });
 
-        // Append all elements to contactElement
-        contactElement.appendChild(firstLink);
-        contactElement.appendChild(secondLink);
-        contactElement.appendChild(thirdLink);
-
-        // Append contactElement to the contactContainer
-        contactContainer.appendChild(contactElement);
+        // Append all elements
+        contactContainer.appendChild(firstLink);
+        contactContainer.appendChild(secondLink);
+        contactContainer.appendChild(thirdLink);
 }

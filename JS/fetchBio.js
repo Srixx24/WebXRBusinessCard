@@ -20,7 +20,7 @@ function displayBio(bio) {
 
     const bioElement = document.createElement('a-entity');
 
-    // Create a link (as a-text)
+    // Create a link
     const linkText = document.createElement('a-text');
     linkText.setAttribute('value', 'View Resume');
     linkText.setAttribute('color', '#000000');
