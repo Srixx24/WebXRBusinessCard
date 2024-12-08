@@ -54,4 +54,6 @@ function displayContact(contacts) {
         contactContainer.appendChild(firstLink);
         contactContainer.appendChild(secondLink);
         contactContainer.appendChild(thirdLink);
+
+        contactContainer.setAttribute('visible', 'true');
 }
