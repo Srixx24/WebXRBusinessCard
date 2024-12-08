@@ -40,19 +40,19 @@ function displayContact(contacts) {
         thirdLink.setAttribute('class', 'clickable');
 
         const firstImage = document.createElement('a-image');
-        firstImage.setAttribute('src', contacts.image);
+        firstImage.setAttribute('src', contacts[0].image);
         firstImage.setAttribute('position', '-1 0.8 0.1'); 
         firstImage.setAttribute('width', '1.5');
         firstImage.setAttribute('height', '1.2');
 
         const secondImage = document.createElement('a-image');
-        secondImage.setAttribute('src', contacts.image);
+        secondImage.setAttribute('src', contacts[1].image);
         secondImage.setAttribute('position', '-1 -0.4 0.1'); 
         secondImage.setAttribute('width', '1.2');
         secondImage.setAttribute('height', '0.8');
 
         const thirdImage = document.createElement('a-image');
-        thirdImage.setAttribute('src', contacts.image);
+        thirdImage.setAttribute('src', contacts[2].image);
         thirdImage.setAttribute('position', '-1 -1.6 0.1'); 
         thirdImage.setAttribute('width', '1.5');
         thirdImage.setAttribute('height', '1.2');
