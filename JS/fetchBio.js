@@ -37,4 +37,6 @@ function displayBio(bio) {
 
     // Append bioElement to the bioContainer
     bioContainer.appendChild(bioElement);
+
+    bioContainer.setAttribute('visible', 'true');
 }
