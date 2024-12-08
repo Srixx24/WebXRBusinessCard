@@ -22,8 +22,8 @@ async function startCamera() {
 // Start the camera when the page loads
 window.addEventListener('load', startCamera);
 
-// html for when I'm ready to start redesigning stuff after I work
-// through my mess of tabs T.T
+// html for when I'm ready to start redesigning stuff after I work through my mess of tabs T.T 
+// <script src="JS/camera.js"></script>
 
 //  <!-- Video feed displayed on a plane -->
 // <a-entity id="videoContainer" geometry="primitive: plane; width: 4; height: 3" position="0 1 -4" material="shader: flat; src: #video"></a-entity>
