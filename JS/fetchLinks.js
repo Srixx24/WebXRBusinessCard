@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentContactIndex = 0; // Track current contact
         let contacts = []; // Store contacts
         
-        function displayContactts(contactsData) {
+        function displayContacts(contactsData) {
             contacts = contactsData;
             const contactContainer = document.getElementById('contact-container');
         
