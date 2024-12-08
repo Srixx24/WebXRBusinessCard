@@ -1,8 +1,9 @@
+// Set up links for Contacts container
+
 document.addEventListener('DOMContentLoaded', () => {
     fetch('Json/linksData.json')
         .then(response => response.json())
         .then(data => {
-            document.title = data.title; // Set the title
             const scene = document.querySelector('a-scene');
             // Display links
             displayContact(data.contacts);
@@ -17,45 +18,43 @@ function displayContact(contacts) {
         return;
     }
 
-    contacts.forEach((contact, index) => {
-        const contactElement = document.createElement('a-entity');
+    while (contactContainer.firstChild) {
+        contactContainer.removeChild(contactContainer.firstChild);
+    }
+        const firstLink = document.createElement('a-text');
+        firstLink.setAttribute('value', 'Github');
+        firstLink.setAttribute('color', '#000000');
+        firstLink.setAttribute('position', '0.2 0.8 0');
+        firstLink.setAttribute('class', 'clickable');
 
-        // Set position for each contact element
-        contactElement.setAttribute('position', `0 ${index * -1.5} 0`);
+        const secondLink = document.createElement('a-text');
+        secondLink.setAttribute('value', 'LinkedIn');
+        secondLink.setAttribute('color', '#000000');
+        secondLink.setAttribute('position', '0.2 -0.4 0');
+        secondLink.setAttribute('class', 'clickable');
 
-        // Create a-text element for title
-        const titleText = document.createElement('a-text');
-        titleText.setAttribute('value', contact.title);
-        titleText.setAttribute('fontSize', '2');
-        titleText.setAttribute('color', '#FFFFFF');
-        titleText.setAttribute('position', '0 0 0.1');
-
-        // Create an image element
-        const imageElement = document.createElement('a-image');
-        imageElement.setAttribute('src', contact.image);
-        imageElement.setAttribute('position', '0 -1 0');
-        imageElement.setAttribute('width', '2');
-        imageElement.setAttribute('height', '1.5');
-
-        // Create a link (as a-text)
-        const linkText = document.createElement('a-text');
-        linkText.setAttribute('value', 'View Links');
-        linkText.setAttribute('color', '#00FF00');
-        linkText.setAttribute('position', '0 -1.5 0.1');
-        linkText.setAttribute('class', 'clickable');
+        const thirdLink = document.createElement('a-text');
+        thirdLink.setAttribute('value', 'Gmail');
+        thirdLink.setAttribute('color', '#000000');
+        thirdLink.setAttribute('position', '0.2 -1.6 0');
+        thirdLink.setAttribute('class', 'clickable');
 
         // Listener for links
-        linkText.addEventListener('click', () => {
+        firstLink.addEventListener('click', () => {
+            window.open(contact.link, '_blank');
+        });
+        secondLink.addEventListener('click', () => {
+            window.open(contact.link, '_blank');
+        });
+        thirdLink.addEventListener('click', () => {
             window.open(contact.link, '_blank');
         });
 
         // Append all elements to contactElement
-        contactElement.appendChild(titleText);
-        contactElement.appendChild(descriptionText);
-        contactElement.appendChild(imageElement);
-        contactElement.appendChild(linkText);
+        contactElement.appendChild(firstLink);
+        contactElement.appendChild(secondLink);
+        contactElement.appendChild(thirdLink);
 
         // Append contactElement to the contactContainer
         contactContainer.appendChild(contactElement);
-    });
 }

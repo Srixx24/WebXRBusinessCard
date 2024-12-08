@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         function showProject(index) {
             const projectContainer = document.getElementById('project-container');
-            projectContainer.setAttribute('visible', true);
+            projectContainer.setAttribute('visible', 'true');
         
             // Clear previous project elements
             while (projectContainer.firstChild) {

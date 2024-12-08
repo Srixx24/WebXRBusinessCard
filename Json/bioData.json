@@ -1,10 +1,7 @@
 {
-    "title": "About Me",
     "bio": [
         {
-            "description": "Ever since I was a child, I have been captivated by the power of creation. Whether it was constructing intricate structures with Legos or crafting virtual houses on Sims, the joy of envisioning something and bringing it to life has always been my true passion. It's this passion that has driven me to pursue my education in the AR/VR program at Atlas School. I aspire to transform this passion into something truly great. While my primary focus lies in game development, the skills I have gained in over a decade of management have sparked my interest in project management. Additionally, since creation does hold such a strong place in my life, I have been leaning toward asset design and development as well. While I remain open to all possibilities within the gaming industry, I have begun to carve a path in these directions. I am ready to embrace the challenges and opportunities that come my way. With an open mind and a hunger for learning, I look forward to the endless possibilities that lie ahead.",
-            "link": "https://docs.google.com/document/d/16DoOQhVb5LWtTK4UrSZPV47kmY2AYvT32YstNNjU4QI/edit?usp=sharing",
-            "image": "Images/Headshot.png"
+            "link": "https://docs.google.com/document/d/16DoOQhVb5LWtTK4UrSZPV47kmY2AYvT32YstNNjU4QI/edit?usp=sharing"
         }
     ]
 }

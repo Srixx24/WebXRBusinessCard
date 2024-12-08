@@ -72,9 +72,21 @@
   </a-entity>
 
   <!-- Content Containers-->
-  <a-entity id="project-container" position="-4 3 -5" rotation="0 50 0" geometry="primitive: plane; height: 5; width: 4" material="color: #FF5733; shader: flat" visible="false"></a-entity>
-  <a-entity id="bio-container" position="0 3 -5" geometry="primitive: plane; height: 5; width: 4" material="color: #33FF57; shader: flat" visible="false"></a-entity>
-  <a-entity id="contact-container" position="4 3 -5" rotation="0 -50 0" geometry="primitive: plane; height: 5; width: 4" material="color: #3357FF; shader: flat" visible="false"></a-entity>
+  <a-entity id="project-container" position="-4 3 -5" rotation="0 50 0" geometry="primitive: plane; height: 5; width: 4" material="color: #FF5733; shader: flat" visible="false">
+  </a-entity>
+
+  <a-entity id="bio-container" position="0 3 -5" geometry="primitive: plane; height: 5; width: 4" material="color: #33FF57; shader: flat" visible="false">
+    <a-text value="About Me"color="#000000" position="-0.6 2.2 0" text=""></a-text>
+    <a-text text="" fontsize="0.5" position="-1.8 0.5 0" wrap-count="50" color="#000000" width="3.7" height="4" value="Ever since I was a child, I have been captivated by the power of creation. Whether it was constructing intricate structures with Legos or crafting virtual houses on Sims, the joy of envisioning something and bringing it to life has always been my true passion. It's this passion that has driven me to pursue my education in the AR/VR program at Atlas School. I aspire to transform this passion into something truly great. While my primary focus lies in game development, the skills I have gained in over a decade of management have sparked my interest in project management. Additionally, since creation does hold such a strong place in my life, I have been leaning toward asset design and development as well. While I remain open to all possibilities within the gaming industry, I have begun to carve a path in these directions. I am ready to embrace the challenges and opportunities that come my way. With an open mind and a hunger for learning, I look forward to the endless possibilities that lie ahead."></a-text>
+    <a-image src="Images/Headshot.png" position="0 -1.5 0.5" width="1.5" height="1.2" material="" geometry=""></a-image>
+  </a-entity>
+
+  <a-entity id="contact-container" position="4 3 -5" rotation="0 -50 0" geometry="primitive: plane; height: 5; width: 4" material="color: #3357FF; shader: flat" visible="false">
+    <a-text value="Connect with Me" fontsize="2" color="#000000" position="-0.8 2 0" text=""></a-text>
+    <a-image src="Images/github.png" position="-1 0.8 0.1" width="1.5" height="1.2"></a-image>
+    <a-image src="Images/Linkedin.png" position="-1 -0.4 0.1" width="1.2" height="0.8"></a-image>
+    <a-image src="Images/Gmail.png" position="-1 -1.6 0.1" width="1.5" height="1.2"></a-image>
+  </a-entity>
 
 </a-scene>
 </body>
