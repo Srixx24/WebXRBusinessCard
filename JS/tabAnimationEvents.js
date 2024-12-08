@@ -24,14 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const currentContainer = document.getElementById(currentContainerId);
 
                 // Reverse animation on ring old
-                currentOpenRing.setAttribute('animation', `property: position; to: ${currentOpenRing.getAttribute('position').x} ${currentOpenRing.getAttribute('position').y} ${currentOpenRing.getAttribute('position').z}; dur: 300;`);
-                currentOpenRing.setAttribute('animation__scale', 'property: scale; to: 1 1 1; dur: 300;');
+                //currentOpenRing.setAttribute('animation', `property: position; to: ${currentOpenRing.getAttribute('position').x} ${currentOpenRing.getAttribute('position').y} ${currentOpenRing.getAttribute('position').z}; dur: 300;`);
+                //currentOpenRing.setAttribute('animation__scale', 'property: scale; to: 1 1 1; dur: 300;');
 
-                // Show old ring after animation
-                setTimeout(() => {
+                // Show old ring skip animation for now
+                //setTimeout(() => {
                     currentContainer.setAttribute('visible', 'false');
                     currentOpenRing.setAttribute('visible', 'true');
-                }, 300);
+                //}, 300);
             }
 
             // Animate the clicked ring
