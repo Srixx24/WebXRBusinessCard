@@ -1,19 +1,19 @@
 // Camera access and permission script, plus toggle commands
 
 async function startCamera() {
-    const video = document.getElementById('video');
-
     try {
-        // Request access to the user's camera
+        // Request camera access
         const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-        video.srcObject = stream; // Set the video source to the stream
-        video.play(); // Start playing the video
+        
+        // Make video element for texture
+        const video = document.createElement('video');
+        video.srcObject = stream;
+        video.muted = true; // *Mute to allow autoplay*
+        video.play();
 
-        // Set the video as a texture for the A-Frame material
-        video.addEventListener('loadeddata', () => {
-            const videoContainer = document.getElementById('AR-scene');
-            videoContainer.setAttribute('material', 'src', video);
-        });
+        // Set the video as texture for plane
+        const arScene = document.getElementById('AR-scene');
+        arScene.children[0].setAttribute('material', 'src', video);
     } catch (error) {
         console.error('Error accessing the camera: ', error);
     }
@@ -21,24 +21,23 @@ async function startCamera() {
 
 // Toggle between AR and forest scene
 document.addEventListener('DOMContentLoaded', () => {
-    let isARMode = false;
-    document.getElementById('corner-toggle').addEventListener('click', () => {
-    isARMode = !isARMode;
+    startCamera();
 
+    let isARMode = true;
     const forest = document.getElementById('forest-scene');
     const videoContainer = document.getElementById('AR-scene');
+    
+    document.getElementById('corner-toggle').addEventListener('click', () => {
+        isARMode = !isARMode;
 
-    if (isARMode) {
-        forest.setAttribute('visible', 'false');
-        videoContainer.setAttribute('visible', 'true');
-        document.getElementById('corner-toggle').setAttribute('text', 'value', 'Forest');
-    } else {
-        forest.setAttribute('visible', 'true');
-        videoContainer.setAttribute('visible', 'false');
-        document.getElementById('corner-toggle').setAttribute('text', 'value', 'AR');
-    }
+        if (isARMode) {
+            forest.setAttribute('visible', 'false');
+            videoContainer.setAttribute('visible', 'true');
+            document.getElementById('corner-toggle').setAttribute('text', 'value', 'Forest');
+        } else {
+            forest.setAttribute('visible', 'true');
+            videoContainer.setAttribute('visible', 'false');
+            document.getElementById('corner-toggle').setAttribute('text', 'value', 'AR');
+        }
     });
 });
-
-// Start the camera when the page loads
-window.addEventListener('load', startCamera);

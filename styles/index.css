@@ -109,19 +109,6 @@ a-scene {
 .socialLinks img:hover {
     transform: scale(1.1); /* Slightly enlarge on hover */
 }
-.toggle-button {
-    color: white;
-    font-size: 16px;
-    text-align: center;
-    line-height: 80px;
-}
-/* Position the toggle button */
-#corner-toggle {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    z-index: 10;
-}
 
 /* Come back to work on this, mobile setting look like trash*/
 @media (max-width: 600px) {
