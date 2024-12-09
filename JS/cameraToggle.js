@@ -11,9 +11,9 @@ async function startCamera() {
         video.muted = true; // *Mute to allow autoplay*
         video.play();
 
-        // Set the video as texture for plane
-        const arScene = document.getElementById('AR-scene');
-        arScene.children[0].setAttribute('material', 'src', video);
+        // Set the video as texture for sphere
+        const arScene = document.getElementById('AR-scene').children[0];
+        arScene.setAttribute('material', 'src', video);
     } catch (error) {
         console.error('Error accessing the camera: ', error);
     }
