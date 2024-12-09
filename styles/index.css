@@ -115,6 +115,13 @@ a-scene {
     text-align: center;
     line-height: 80px;
 }
+/* Position the toggle button */
+#corner-toggle {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
+}
 
 /* Come back to work on this, mobile setting look like trash*/
 @media (max-width: 600px) {
