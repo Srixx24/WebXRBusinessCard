@@ -38,15 +38,14 @@
 </div>
 
 <!-- Start AR camera Scene -->
-<a-scene id="AR-camera" overlay-visibility="" class="fullscreen" xr="enabled: true" embedded>
-    <a-camera  position="0 1.6 0" look-controls="">
-      <a-cursor></a-cursor>
-    </a-camera>
-      <a-entity geometry="primitive: box; width: 0.4; height: 0.4" material="color: #6C5FA7; shader: flat; opacity: 0.5" position="1.5 2 -3">
-        <a-text id="Toggle-label" text="" fontsize="0.5" position="-.1 0 0" color="#B24968" width="1.5" height="1.5" value="Hello :)"></a-text>
-      </a-entity>
+<a-scene id="AR-camera" overlay-visibility="" xr="enabled: true" embedded>
+  <a-camera  position="0 1.6 0" look-controls="">
+    <a-cursor></a-cursor>
+    <a-entity geometry="primitive: box; width: 0.4; height: 0.4" material="color: #6C5FA7; shader: flat; opacity: 0.5" position="1.5 2 -3">
+      <a-text id="Toggle-label" text="" fontsize="0.5" position="-.1 0 0" color="#B24968" width="1.5" height="1.5" value="Hello :)"></a-text>
     </a-entity>
-  </a-entity>
+  </a-camera>
+    
 
   <!-- Toggle -->
   <a-entity id="Scene-toggle" geometry="primitive: dodecahedron; radius: 0.8" material="color: #0a0a0a; shader: flat" position="0 0 -1" class="clickable" animation="property: rotation; to: 0 360 0; loop: true; dur: 8000; easing: linear">
@@ -86,16 +85,16 @@
     <a-entity rotation="-90 0 0" class="environmentGround" scale="1 1 3" shadow="cast: false; receive: false"></a-entity>
     <a-sky radius="200" theta-length="110" position="0 0 9.091" material="sunPosition: 0 -0.025853424423087495 -0.9996657443593832;"></a-sky>
     <a-entity id="stars" scale="0.89 0.51 1"></a-entity>
+  </a-entity>
 
-    <!-- Audio -->
-    <a-sound src="url(https://srixx24.github.io/WebXRBusinessCard/Elements/Fairy Dust.wav)" autoplay="true" loop="true" volume="1.0"></a-sound>
+  <!-- Audio -->
+  <a-sound src="url(https://srixx24.github.io/WebXRBusinessCard/Elements/Fairy Dust.wav)" autoplay="true" loop="true" volume="1.0"></a-sound>
     
-    <!-- User controls/position -->
-    <a-entity position="0 1.6 .1" camera="userHeight:1.6" look-controls="" rotation="">
-      <a-cursor></a-cursor>
-      <a-entity geometry="primitive: box; width: 0.4; height: 0.4" material="color: #6C5FA7; shader: flat; opacity: 0.5" position="1.5 2 -3">
-        <a-text id="Toggle-label" text="" fontsize="0.5" position="-.1 0 0" color="#B24968" width="1.5" height="1.5" value="Hello :)"></a-text>
-      </a-entity>
+  <!-- User controls/position -->
+  <a-entity position="0 1.6 .1" camera="userHeight:1.6" look-controls="" rotation="">
+    <a-cursor></a-cursor>
+    <a-entity geometry="primitive: box; width: 0.4; height: 0.4" material="color: #6C5FA7; shader: flat; opacity: 0.5" position="1.5 2 -3">
+      <a-text id="Toggle-label" text="" fontsize="0.5" position="-.1 0 0" color="#B24968" width="1.5" height="1.5" value="Hello :)"></a-text>
     </a-entity>
   </a-entity>
 
