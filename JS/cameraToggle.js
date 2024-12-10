@@ -60,7 +60,7 @@ window.addEventListener('load', () => {
 
 // Toggle between AR and forest scene
 document.addEventListener('DOMContentLoaded', () => {
-    let isARMode = true;
+    let isARMode = false;
     const forest = document.getElementById('forest-scene');
     const videoContainer = document.getElementById('AR-camera');
     
