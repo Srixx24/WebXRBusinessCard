@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 let isARMode = false;
                 const forest = document.getElementById('forest-scene');
                 const videoContainer = document.getElementById('AR-camera');
-                const sceneElement = document.getElementById('overlay');
+                const sceneElement = document.getElementById('scene');
 
                 if (sceneElement) {
                     sceneElement.addEventListener('click', () => {
