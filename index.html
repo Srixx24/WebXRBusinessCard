@@ -19,7 +19,6 @@
     <script src="JS/fetchLinks.js"></script>
     <script src="JS/fetchProjects.js"></script>
     <script src="JS/cameraToggle.js"></script>
-    
 </head>
 <body>
 
@@ -40,25 +39,9 @@
   </div>
 </div>
 
-<!-- Start A-Frame Scene -->
-<a-scene id="scene" overlay-visibility="" class="fullscreen">
+<!-- Start AR camera Scene -->
+<a-scene id="AR-scene" overlay-visibility="" class="fullscreen">
 
-<!-- Forest Scene View -->
-  <a-entity id="forest-scene" visible="false" environment="fog:0.83;lightPosition:0 -4.8 -0.46;dressingColor:#00ff11;dressingUniformScale:false;dressingAmount:100;dressing:trees;grid:none;horizonColor:#edb02c;lighting:point;skyType:atmosphere;groundTexture:walkernoise;groundColor2:#09ec18;groundColor:#13722f;active:true;skyColor:#88c;preset:starry">
-    <a-entity position="0 50 0" light="intensity:0.1;angle:60.65;groundColor:#13722f;color:#c3c3e5;type:point"></a-entity>
-    <a-entity position="0 -0.15 -5.8" light="type:point;shadowCameraLeft:-10;shadowCameraBottom:-10;shadowCameraRight:10;shadowCameraTop:10;intensity:0.087"></a-entity>
-    <a-entity rotation="-90 0 0" class="environmentGround" scale="1 1 3" shadow="cast:false;receive:false"></a-entity>
-    <a-sky radius="200" theta-length="110" position="0 0 9.091" material="sunPosition:0 -0.025853424423087495 -0.9996657443593832;"></a-sky>
-    <a-entity id="stars" scale="0.89 0.51 1"></a-entity>
-  </a-entity>
-
-  <!-- AR camera Scene View -->
-  <a-entity id="AR-scene" visible>
-  </a-entity>
-
-  <!-- Audio -->
-  <a-sound src="url(https://srixx24.github.io/WebXRBusinessCard/Elements/Fairy Dust.wav)" autoplay="true" loop="true" volume="1.0"></a-sound>
-  
   <!-- User controls/position -->
   <a-entity position="0 1.6 0" camera="userHeight:1.6" look-controls="" rotation="">
     <a-cursor></a-cursor>
@@ -92,7 +75,55 @@
     <a-text text="" fontsize="0.5" position="-1.8 0.6 0" wrap-count="47" color="#000000" width="3.7" height="4.6" value="Ever since I was a child, I have been captivated by the power of creation. Whether it was constructing intricate structures with Legos or crafting virtual houses on Sims, the joy of envisioning something and bringing it to life has always been my true passion. It's this passion that has driven me to pursue my education in the AR/VR program at Atlas School. I aspire to transform this passion into something truly great. While my primary focus lies in game development, the skills I have gained in over a decade of management have sparked my interest in project management. Additionally, since creation does hold such a strong place in my life, I have been leaning toward asset design and development as well. While I remain open to all possibilities within the gaming industry, I have begun to carve a path in these directions. I am ready to embrace the challenges and opportunities that come my way. With an open mind and a hunger for learning, I look forward to the endless possibilities that lie ahead."></a-text>
     <a-image src="Images/Headshot.png" position="0 -1.5 0.5" width="1.5" height="1.2" material="" geometry=""></a-image>
   </a-entity>
-
 </a-scene>
+
+<!-- Start Forest Scene -->
+<a-scene id="forest-scene" overlay-visibility="" class="fullscreen">
+    <a-entity visible="false" environment="fog:0.83;lightPosition:0 -4.8 -0.46;dressingColor:#00ff11;dressingUniformScale:false;dressingAmount:100;dressing:trees;grid:none;horizonColor:#edb02c;lighting:point;skyType:atmosphere;groundTexture:walkernoise;groundColor2:#09ec18;groundColor:#13722f;active:true;skyColor:#88c;preset:starry">
+      <a-entity position="0 50 0" light="intensity:0.1;angle:60.65;groundColor:#13722f;color:#c3c3e5;type:point"></a-entity>
+      <a-entity position="0 -0.15 -5.8" light="type:point;shadowCameraLeft:-10;shadowCameraBottom:-10;shadowCameraRight:10;shadowCameraTop:10;intensity:0.087"></a-entity>
+      <a-entity rotation="-90 0 0" class="environmentGround" scale="1 1 3" shadow="cast:false;receive:false"></a-entity>
+      <a-sky radius="200" theta-length="110" position="0 0 9.091" material="sunPosition:0 -0.025853424423087495 -0.9996657443593832;"></a-sky>
+      <a-entity id="stars" scale="0.89 0.51 1"></a-entity>
+    </a-entity>
+  
+    <!-- Audio -->
+    <a-sound src="url(https://srixx24.github.io/WebXRBusinessCard/Elements/Fairy Dust.wav)" autoplay="true" loop="true" volume="1.0"></a-sound>
+    
+    <!-- User controls/position -->
+    <a-entity position="0 1.6 0" camera="userHeight:1.6" look-controls="" rotation="">
+      <a-cursor></a-cursor>
+    </a-entity>
+  
+    <!-- Corner Toggle -->
+    <a-entity id="corner-toggle" geometry="primitive: box; width: 0.4; height: 0.4; depth: 0.1" material="color: #6C5FA7; shader: flat" position="0.5 1.5 -2" text="value: Toggle; align: center;" class="clickable" animation="property: rotation; to: 0 360 0; loop: true; dur: 8000; easing: linear">
+      <a-text text="" fontsize="0.5" position="0 0 0" wrap-count="47" color="#000000" width="1.5" height="4.6" value="Toggle"></a-text>
+    </a-entity>
+  
+    <!-- Project Highlights -->
+    <a-entity id="project-highlights" position="-4 1.5 -3" rotation="0 50 0" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #FA8572; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable">
+      <a-text value="Project Highlights" align="center" position="0 0 0.01" color="#FFFFFF"></a-text>
+    </a-entity>
+  
+    <!-- About Me -->
+    <a-entity id="about-me" position="0 1.5 -4.5" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #B24968; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable">
+      <a-text value="About Me" align="center" position="0 0 0.01" color="#FFFFFF"></a-text>
+    </a-entity>
+  
+    <!-- Connect With Me -->
+    <a-entity id="connect-with-me" position="4 1.5 -3" rotation="0 -50 0" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #6C3779; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable">
+      <a-text value="Connect With Me" align="center" position="0 0 0.01" color="#FFFFFF"></a-text>
+    </a-entity>
+  
+    <!-- Content Containers-->
+    <a-entity id="project-container" position="-4 3 -5" rotation="0 50 0" geometry="primitive: plane; height: 5; width: 4" material="color: #FA8572; shader: flat" visible="false"></a-entity>
+    <a-entity id="contact-container" position="4 3 -5" rotation="0 -50 0" geometry="primitive: plane; height: 5; width: 4" material="color: #6C3779; shader: flat" visible="false"></a-entity>
+    <a-entity id="bio-container" position="0 3 -6" geometry="primitive: plane; height: 5; width: 4" material="color: #B24968; shader: flat" visible="false">
+      <a-text value="About Me"color="#000000" position="-0.6 2.2 0" text=""></a-text>
+      <a-text text="" fontsize="0.5" position="-1.8 0.6 0" wrap-count="47" color="#000000" width="3.7" height="4.6" value="Ever since I was a child, I have been captivated by the power of creation. Whether it was constructing intricate structures with Legos or crafting virtual houses on Sims, the joy of envisioning something and bringing it to life has always been my true passion. It's this passion that has driven me to pursue my education in the AR/VR program at Atlas School. I aspire to transform this passion into something truly great. While my primary focus lies in game development, the skills I have gained in over a decade of management have sparked my interest in project management. Additionally, since creation does hold such a strong place in my life, I have been leaning toward asset design and development as well. While I remain open to all possibilities within the gaming industry, I have begun to carve a path in these directions. I am ready to embrace the challenges and opportunities that come my way. With an open mind and a hunger for learning, I look forward to the endless possibilities that lie ahead."></a-text>
+      <a-image src="Images/Headshot.png" position="0 -1.5 0.5" width="1.5" height="1.2" material="" geometry=""></a-image>
+    </a-entity>
+  </a-scene>
+
 </body>
 </html>
