@@ -28,7 +28,19 @@
     <div>Welcome to my portfolio</div>
     <div><img id="logo" src="Images/LovinsLogo.png" width="200" alt="Lovins Logo"></div>
   </div>
-  <div class="cloud-container">
+  <div id="cloud-container" style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-start;
+">
     <div class="cloud halftone" style="top: 10%; left: -100px; background-image: url('Images/Cloud1.png');animation-delay: 5s;"></div>
     <div class="cloud halftone" style="top: 25%; left: -100px; background-image: url('Images/Cloud4.png');"></div>
     <div class="cloud halftone" style="top: 45%; left: -100px; background-image: url('Images/Cloud5.png');animation-delay: 3s;"></div>
@@ -38,7 +50,7 @@
 </div>
 
 <!-- Start AR camera Scene -->
-<a-scene id="AR-camera" overlay-visibility="" xr="enabled: true" embedded>
+<a-scene id="AR-camera" visible xr="enabled: true" embedded>
   <a-camera  position="0 1.6 0" look-controls="">
     <a-cursor></a-cursor>
     <a-entity geometry="primitive: box; width: 0.4; height: 0.4" material="color: #6C5FA7; shader: flat; opacity: 0.5" position="1.5 2 -3">
@@ -78,7 +90,7 @@
 </a-scene>
 
 <!-- Start Forest Scene -->
-<a-scene id="forest-scene" visible="false" class="fullscreen">
+<a-scene id="forest-scene" overlay-visibility="" class="fullscreen">
   <a-entity environment="fog: 0.83; lightPosition: 0 -4.8 -0.46; dressingColor: #00ff11; dressingUniformScale: false; dressingAmount: 100; dressing: trees; grid: none; horizonColor: #edb02c; lighting: point; skyType: atmosphere; groundTexture: walkernoise; groundColor2: #09ec18; groundColor: #13722f; active: true; skyColor: #88c; preset: starry"> 
     <a-entity position="0 50 0" light="intensity: 0.1; angle: 60.65; groundColor: #13722f; color: #c3c3e5; type: point"></a-entity>
     <a-entity position="0 -0.15 -5.8" light="type: point; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10; intensity: 0.087"></a-entity>
