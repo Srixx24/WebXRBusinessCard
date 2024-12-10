@@ -37,7 +37,7 @@ body { margin: 0; overflow: hidden; }
     animation: move-cloud 15s linear infinite;
     overflow: hidden; /* Ensure halftone doesn't overflow */
 }
-.cloudcontainer {
+.cloud-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -146,7 +146,7 @@ a-scene {
         align-content: center;
         justify-content: center;
     }
-    .cloudcontainer {
+    .cloud-container {
         position: fixed;
         top: 0;
         left: 0;
