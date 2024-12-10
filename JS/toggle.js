@@ -4,17 +4,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const forest = document.getElementById('forest-scene');
     const videoContainer = document.getElementById('AR-camera');
     
-    document.getElementById('corner-toggle').addEventListener('click', () => {
+    document.getElementById('Scene-toggle').addEventListener('click', () => {
         isARMode = !isARMode;
 
         if (isARMode) {
             forest.setAttribute('visible', 'false');
             videoContainer.setAttribute('visible', 'true');
-            document.getElementById('corner-toggle').setAttribute('text', 'value', 'Forest');
+            document.getElementById('Toggle-label').setAttribute('text', 'value', 'Forest');
         } else {
             forest.setAttribute('visible', 'true');
             videoContainer.setAttribute('visible', 'false');
-            document.getElementById('corner-toggle').setAttribute('text', 'value', 'AR');
+            document.getElementById('Toggle-label').setAttribute('text', 'value', 'AR');
         }
     });
 });
