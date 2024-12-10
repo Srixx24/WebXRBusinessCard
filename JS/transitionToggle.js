@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.getElementById('overlay');
     const welcomeScreen = document.getElementById('welcome-screen');
     const logo = document.getElementById('logo');
-    const scene = document.getElementById('forest-scene');
+    const scene = document.getElementById('AR-camera');
 
     // Check if elements exist before adding event listeners
     if (overlay && welcomeScreen && logo && scene) {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Toggle between AR and forest scene
 document.addEventListener('DOMContentLoaded', () => {
-    let isARMode = false; // Set forest active
+    let isARMode = true; // Set forest not active
     const forest = document.getElementById('forest-scene');
     const videoContainer = document.getElementById('AR-camera');
    
