@@ -20,76 +20,13 @@
 </head>
 <body>
 
-<div class="overlay" id="overlay">Click anywhere to enter</div>
-
-<!-- Welcome screen only -->
-<div class="welcome-screen" id="welcome-screen">
-  <div style="display: flex;flex-direction: column;align-items: center;">
-    <div>Welcome to my portfolio</div>
-    <div><img id="logo" src="Images/LovinsLogo.png" width="200" alt="Lovins Logo"></div>
-  </div>
-  <div id="cloud-container" style="
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  flex-direction: row;
-  justify-content: center;
-  align-content: flex-start;
-">
-    <div class="cloud halftone" style="top: 10%; left: -100px; background-image: url('Images/Cloud1.png');animation-delay: 5s;"></div>
-    <div class="cloud halftone" style="top: 25%; left: -100px; background-image: url('Images/Cloud4.png');"></div>
-    <div class="cloud halftone" style="top: 45%; left: -100px; background-image: url('Images/Cloud5.png');animation-delay: 3s;"></div>
-    <div class="cloud halftone" style="top: 65%; left: -100px; background-image: url('Images/Cloud3.png');animation-delay: 2s;"></div>
-    <div class="cloud halftone" style="top: 85%; left: -100px; background-image: url('Images/Cloud2.png');animation-delay: 4s;"></div>
-  </div>
-</div>
-
-<!-- Start AR camera Scene -->
-<a-scene id="AR-camera" visible xr="enabled: true" embedded>
-  <a-camera  position="0 1.6 0" look-controls="">
-    <a-cursor></a-cursor>
-    <a-entity geometry="primitive: box; width: 0.4; height: 0.4" material="color: #6C5FA7; shader: flat; opacity: 0.5" position="1.5 2 -3">
-      <a-text id="Toggle-label" text="" fontsize="0.5" position="-.1 0 0" color="#B24968" width="1.5" height="1.5" value="Hello :)"></a-text>
-    </a-entity>
-  </a-camera>
-    
-
-  <!-- Toggle -->
-  <a-entity id="Scene-toggle" geometry="primitive: dodecahedron; radius: 0.8" material="color: #0a0a0a; shader: flat" position="0 0 -1" class="clickable" animation="property: rotation; to: 0 360 0; loop: true; dur: 8000; easing: linear">
-    <a-text text="" fontsize="0.5" position="0 0 0" wrap-count="47" color="#FFFFFF" width="1.5" height="1.5" value="Toggle"></a-text>
-  </a-entity>
-
-  <!-- Project Highlights -->
-  <a-entity id="project-highlights" position="-4 1.5 -3" rotation="0 50 0" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #FA8572; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable">
-    <a-text value="Project Highlights" align="center" position="0 0 0.01" color="#FFFFFF"></a-text>
-  </a-entity>
-
-  <!-- About Me -->
-  <a-entity id="about-me" position="0 1.5 -4.5" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #B24968; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable">
-    <a-text value="About Me" align="center" position="0 0 0.01" color="#FFFFFF"></a-text>
-  </a-entity>
-
-  <!-- Connect With Me -->
-  <a-entity id="connect-with-me" position="4 1.5 -3" rotation="0 -50 0" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #6C3779; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable">
-    <a-text value="Connect With Me" align="center" position="0 0 0.01" color="#FFFFFF"></a-text>
-  </a-entity>
-
-  <!-- Content Containers-->
-  <a-entity id="project-container" position="-4 3 -5" rotation="0 50 0" geometry="primitive: plane; height: 5; width: 4" material="color: #FA8572; shader: flat" visible="false"></a-entity>
-  <a-entity id="contact-container" position="4 3 -5" rotation="0 -50 0" geometry="primitive: plane; height: 5; width: 4" material="color: #6C3779; shader: flat" visible="false"></a-entity>
-  <a-entity id="bio-container" position="0 3 -6" geometry="primitive: plane; height: 5; width: 4" material="color: #B24968; shader: flat" visible="false">
-    <a-text value="About Me"color="#000000" position="-0.6 2.2 0" text=""></a-text>
-    <a-text text="" fontsize="0.5" position="-1.8 0.6 0" wrap-count="47" color="#000000" width="3.7" height="4.6" value="Ever since I was a child, I have been captivated by the power of creation. Whether it was constructing intricate structures with Legos or crafting virtual houses on Sims, the joy of envisioning something and bringing it to life has always been my true passion. It's this passion that has driven me to pursue my education in the AR/VR program at Atlas School. I aspire to transform this passion into something truly great. While my primary focus lies in game development, the skills I have gained in over a decade of management have sparked my interest in project management. Additionally, since creation does hold such a strong place in my life, I have been leaning toward asset design and development as well. While I remain open to all possibilities within the gaming industry, I have begun to carve a path in these directions. I am ready to embrace the challenges and opportunities that come my way. With an open mind and a hunger for learning, I look forward to the endless possibilities that lie ahead."></a-text>
-    <a-image src="Images/Headshot.png" position="0 -1.5 0.5" width="1.5" height="1.2" material="" geometry=""></a-image>
-  </a-entity>
-</a-scene>
-
-
+  <a-scene>
+    <a-camera position="0 1.6 0"></a-camera>
+    <a-box position="0 1 -5" rotation="0 45 0" color="#4CC3D9"></a-box>
+    <a-sphere position="1 1 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+    <a-cylinder position="-1 0.75 -5" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+    <a-plane rotation="-90 0 0" position="0 0 -4" width="4" height="4" color="#7BC8A4"></a-plane>
+  </a-scene>
 
 </body>
 </html>
