@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             forest.setAttribute('visible', 'true');
             videoContainer.setAttribute('visible', 'false');
-            document.getElementById('Toggle-label').setAttribute('text', 'value', 'AR');
+            document.getElementById('Toggle-label').setAttribute('text', 'value', 'AR Camera');
         }
     });
 });
