@@ -37,6 +37,19 @@ body { margin: 0; overflow: hidden; }
     animation: move-cloud 15s linear infinite;
     overflow: hidden; /* Ensure halftone doesn't overflow */
 }
+.cloud-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+}
 .halftone {
     position: relative; /* Needed for absolute positioning of ::after */
 }
@@ -116,13 +129,35 @@ a-scene {
     transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
-/* Come back to work on this, mobile setting look like trash*/
 @media (max-width: 600px) {
     .welcome-screen {
         font-size: 2em; /* Smaller font on mobile */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
     }
     .logo img {
         width: 150px; /* Adjust logo size for mobile */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+    }
+    .cloud-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: center;
+        align-content: flex-start;
     }
 }
 .Cross-Browser {
