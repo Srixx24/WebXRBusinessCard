@@ -42,7 +42,12 @@ AFRAME.registerComponent('xr-camera', {
 });
 
 // Add the XR camera to AR scene
-document.querySelector('#AR-scene').setAttribute('xr-camera', '');
+window.addEventListener('load', () => {
+    const arScene = document.querySelector('#AR-scene');
+    if (arScene) {
+        arScene.setAttribute('xr-camera', '');
+    }
+});
 
 // Toggle between AR and forest scene
 document.addEventListener('DOMContentLoaded', () => {
