@@ -52,7 +52,7 @@ AFRAME.registerComponent('xr-camera', {
 
 // Add the XR camera to AR scene
 window.addEventListener('load', () => {
-    const arScene = document.querySelector('#AR-scene');
+    const arScene = document.querySelector('#AR-camera');
     if (arScene) {
         arScene.setAttribute('xr-camera', '');
     }
@@ -62,7 +62,7 @@ window.addEventListener('load', () => {
 document.addEventListener('DOMContentLoaded', () => {
     let isARMode = true;
     const forest = document.getElementById('forest-scene');
-    const videoContainer = document.getElementById('AR-scene');
+    const videoContainer = document.getElementById('AR-camera');
     
     document.getElementById('corner-toggle').addEventListener('click', () => {
         isARMode = !isARMode;

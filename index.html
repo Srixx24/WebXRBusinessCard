@@ -41,6 +41,8 @@
 
 <!-- Start AR camera Scene -->
 <a-scene id="AR-scene" overlay-visibility="" class="fullscreen">
+  <a-entity id="AR-camera" visible>
+  </a-entity>
 
   <!-- User controls/position -->
   <a-entity position="0 1.6 0" camera="userHeight:1.6" look-controls="" rotation="">
@@ -91,13 +93,20 @@
     <a-sound src="url(https://srixx24.github.io/WebXRBusinessCard/Elements/Fairy Dust.wav)" autoplay="true" loop="true" volume="1.0"></a-sound>
     
     <!-- User controls/position -->
+    <a-entity position="0 1.6 .1" camera="userHeight:1.6" look-controls="" rotation="">
+      <a-cursor></a-cursor>
+    </a-entity>
+
+    <!-- User controls/position -->
     <a-entity position="0 1.6 0" camera="userHeight:1.6" look-controls="" rotation="">
       <a-cursor></a-cursor>
     </a-entity>
   
     <!-- Corner Toggle -->
-    <a-entity id="corner-toggle" geometry="primitive: box; width: 0.4; height: 0.4; depth: 0.1" material="color: #6C5FA7; shader: flat" position="0.5 1.5 -2" text="value: Toggle; align: center;" class="clickable" animation="property: rotation; to: 0 360 0; loop: true; dur: 8000; easing: linear">
-      <a-text text="" fontsize="0.5" position="0 0 0" wrap-count="47" color="#000000" width="1.5" height="4.6" value="Toggle"></a-text>
+    <a-entity camera="" look-controls="">
+      <a-entity id="corner-toggle" geometry="primitive: box; width: 0.4; height: 0.4; depth: 0.1" material="color: #6C5FA7; shader: flat; opacity: 0.5" position="0.5 1.5 -3" text="value: Toggle; align: center;" class="clickable">
+        <a-text text="" fontsize="0.5" position="0 0 0" wrap-count="47" color="#B24968" width="1.5" height="4.6" value="Toggle"></a-text>
+      </a-entity>
     </a-entity>
   
     <!-- Project Highlights -->
