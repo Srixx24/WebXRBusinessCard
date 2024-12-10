@@ -8,9 +8,10 @@
 
     <!-- Links -->
     <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
     <!-- Scripts -->
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://unpkg.com/three@0.126.0/build/three.js"></script>
     <script src="https://srixx24.github.io/WebXRBusinessCard/Packages/A-Frame_Environments/dist/aframe-environment-component.min.js"></script>
     <script src="JS/transition.js"></script>
     <script src="JS/tabAnimationEvents.js"></script>
@@ -18,9 +19,7 @@
     <script src="JS/fetchLinks.js"></script>
     <script src="JS/fetchProjects.js"></script>
     <script src="JS/cameraToggle.js"></script>
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    
 </head>
 <body>
 
@@ -55,7 +54,6 @@
 
   <!-- AR camera Scene View -->
   <a-entity id="AR-scene" visible>
-    <a-sphere radius="10" position="0 0 0" material="shader: flat; transparent: true;"></a-sphere>
   </a-entity>
 
   <!-- Audio -->

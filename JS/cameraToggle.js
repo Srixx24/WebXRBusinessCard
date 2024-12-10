@@ -1,28 +1,51 @@
 // Camera access and permission script, plus toggle commands
 
-async function startCamera() {
-    try {
-        // Request camera access
-        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-        
-        // Make video element for texture
-        const video = document.createElement('video');
-        video.srcObject = stream;
-        video.muted = true; // *Mute to allow autoplay*
-        video.play();
+AFRAME.registerComponent('xr-camera', {
+    init: async function () {
+        const canvas = document.createElement("canvas");
+        const gl = canvas.getContext("webgl", { xrCompatible: true });
+        const scene = new THREE.Scene();
 
-        // Set the video as texture for sphere
-        const arScene = document.getElementById('AR-scene').children[0];
-        arScene.setAttribute('material', 'src', video);
-    } catch (error) {
-        console.error('Error accessing the camera: ', error);
+        const renderer = new THREE.WebGLRenderer({
+            alpha: true,
+            preserveDrawingBuffer: true,
+            canvas: canvas,
+            context: gl
+        });
+
+        const session = await navigator.xr.requestSession("immersive-ar", { requiredFeatures: ['hit-test'] });
+        session.updateRenderState({
+            baseLayer: new XRWebGLLayer(session, gl)
+        });
+
+        const referenceSpace = await session.requestReferenceSpace('local');
+        const camera = new THREE.PerspectiveCamera();
+        camera.matrixAutoUpdate = false;
+
+        const onXRFrame = (time, frame) => {
+            session.requestAnimationFrame(onXRFrame);
+            gl.bindFramebuffer(gl.FRAMEBUFFER, session.renderState.baseLayer.framebuffer);
+
+            const pose = frame.getViewerPose(referenceSpace);
+            if (pose) {
+                const view = pose.views[0];
+                camera.matrix.fromArray(view.transform.matrix);
+                camera.projectionMatrix.fromArray(view.projectionMatrix);
+                camera.updateMatrixWorld(true);
+            }
+
+            renderer.render(scene, camera);
+        };
+
+        session.requestAnimationFrame(onXRFrame);
     }
-}
+});
+
+// Add the XR camera to AR scene
+document.querySelector('#AR-scene').setAttribute('xr-camera', '');
 
 // Toggle between AR and forest scene
 document.addEventListener('DOMContentLoaded', () => {
-    startCamera();
-
     let isARMode = true;
     const forest = document.getElementById('forest-scene');
     const videoContainer = document.getElementById('AR-scene');
