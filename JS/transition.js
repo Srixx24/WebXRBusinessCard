@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 logo.style.display = 'none';
                 overlay.style.display = 'none';
                 scene.style.display = 'block';
+            
+                const arScene = document.querySelector('#AR-scene');
+                arScene.setAttribute('xr-camera', '');
             }, 1000);
         });
     }

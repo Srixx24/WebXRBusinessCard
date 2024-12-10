@@ -77,6 +77,12 @@ body { margin: 0; overflow: hidden; }
     width: 100%;
     height: 100%;
     z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Parkinsans", sans-serif;
+    color: color(xyz-d50 0.09 0.11 0.22);
+    font-weight: 700;
 }
 .logo {
     display: flex;

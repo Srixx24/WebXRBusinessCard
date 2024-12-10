@@ -13,31 +13,40 @@ AFRAME.registerComponent('xr-camera', {
             context: gl
         });
 
-        const session = await navigator.xr.requestSession("immersive-ar", { requiredFeatures: ['hit-test'] });
-        session.updateRenderState({
-            baseLayer: new XRWebGLLayer(session, gl)
-        });
+        const startARSession = async () => {
+            try {
+                const session = await navigator.xr.requestSession("immersive-ar", { requiredFeatures: ['hit-test'] });
+                session.updateRenderState({
+                    baseLayer: new XRWebGLLayer(session, gl)
+                });
 
-        const referenceSpace = await session.requestReferenceSpace('local');
-        const camera = new THREE.PerspectiveCamera();
-        camera.matrixAutoUpdate = false;
+                const referenceSpace = await session.requestReferenceSpace('local');
+                const camera = new THREE.PerspectiveCamera();
+                camera.matrixAutoUpdate = false;
 
-        const onXRFrame = (time, frame) => {
-            session.requestAnimationFrame(onXRFrame);
-            gl.bindFramebuffer(gl.FRAMEBUFFER, session.renderState.baseLayer.framebuffer);
+                const onXRFrame = (time, frame) => {
+                    session.requestAnimationFrame(onXRFrame);
+                    gl.bindFramebuffer(gl.FRAMEBUFFER, session.renderState.baseLayer.framebuffer);
 
-            const pose = frame.getViewerPose(referenceSpace);
-            if (pose) {
-                const view = pose.views[0];
-                camera.matrix.fromArray(view.transform.matrix);
-                camera.projectionMatrix.fromArray(view.projectionMatrix);
-                camera.updateMatrixWorld(true);
+                    const pose = frame.getViewerPose(referenceSpace);
+                    if (pose) {
+                        const view = pose.views[0];
+                        camera.matrix.fromArray(view.transform.matrix);
+                        camera.projectionMatrix.fromArray(view.projectionMatrix);
+                        camera.updateMatrixWorld(true);
+                    }
+
+                    renderer.render(scene, camera);
+                };
+
+                session.requestAnimationFrame(onXRFrame);
+            } catch (error) {
+                console.error('Failed to start AR session:', error);
             }
-
-            renderer.render(scene, camera);
         };
 
-        session.requestAnimationFrame(onXRFrame);
+        // Start AR session when the scene is displayed
+        this.el.addEventListener('click', startARSession);
     }
 });
 
