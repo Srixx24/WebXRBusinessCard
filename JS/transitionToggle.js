@@ -1,5 +1,5 @@
-// Responsible for transition between welcome page and main page
-// Responsible for toggle between scenes
+// Responsible for transition between welcome page and into AR scene
+// then the toggle between scenes after welcome
 
 document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.getElementById('overlay');

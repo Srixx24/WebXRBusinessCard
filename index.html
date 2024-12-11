@@ -40,6 +40,7 @@
 
 <!-- Start AR camera Scene -->
 <a-scene id="AR-camera" overlay-visibility="" xr="enabled: true" vr-mode-ui="enabled: false;" embedded arjs="sourceType: webcam;" renderer="precision: medium;">
+  
   <a-camera position="0 1.6 2" look-controls="">
     <a-cursor></a-cursor>
   </a-camera>
@@ -49,6 +50,7 @@
     <img id="GithubImage" src="Assets/github.png" alt="Github">
     <img id="LinkedinImage" src="Assets/Linkedin.png" alt="Linkedin">
     <img id="GmailImage" src="Assets/Gmail.png" alt="Gmail">
+    <img id="#KittyToggle" src="Assets/KittyToggle.png" alt="Toggle">
   </a-assets>
 
   <!-- Info and Links -->
@@ -59,11 +61,15 @@
   <a-image src="#LinkedinImage" position="0 0 -5" scale=".5 .5 .5" class="clickable" id="Linkedin"></a-image>
   <a-image src="#GmailImage" position="0 -1 -5" scale=".5 .5 .5" class="clickable" id="GmailIcon"></a-image>
 
+  <!-- Toggle -->
+  <a-image src="#KittyToggle" position="-1 0 -6" scale="0.4 0.4 0.4" class="clickable" id="Toggle"></a-image>
 
-  <!-- Toggle *Change this to UI transition with listener to forest* -->
-  <>
-  
 </a-scene>
+
+<div class="a-enter-vr fullscreen" aframe-injected="" style="position: fixed;">
+  <div class="ar-label" id="ar-label" aframe-injected="">Press the kitten to go to Forest</div>
+</div>
+
 
 </body>
 </html>
