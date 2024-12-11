@@ -16,6 +16,7 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="JS/transitionToggle.js"></script>
     <script src="Scenes/forest.html"></script>
+
 </head>
 <body>
 
@@ -42,13 +43,25 @@
     <a-cursor></a-cursor>
   </a-camera>
 
-  <!-- ADD Links, my name and email-->
-  <a-assets></a-assets>
-  <a-text></a-text>
-  <a-image></a-image>
+  <!-- Preload assets-->
+  <a-assets>
+    <img id="GithubImage" src="Assets/github.png" alt="Github">
+    <img id="LinkedinImage" src="Assets/Linkedin.png" alt="Linkedin">
+    <img id="GmailImage" src="Assets/Gmail.png" alt="Gmail">
+  </a-assets>
+
+  <!-- Info and Links -->
+  <a-text value="Jackie Lovins" fontsize="2" position="0 0 0" wrap-count="47" color="#6C5FA7" width="1.5" height="1.5"></a-text>
+  <a-text value="Game Dev" fontsize="1" position="0 -1 0" wrap-count="47" color="#6C5FA7" width="1.5" height="1.5"></a-text>
+  
+  <a-image src="#GithubImage" position="0 1 -5" scale=".5 .5 .5" class="clickable" id="Github"></a-image>
+  <a-image src="#LinkedinImage" position="0 0 -5" scale=".5 .5 .5" class="clickable" id="Linkedin"></a-image>
+  <a-image src="#GmailImage" position="0 -1 -5" scale=".5 .5 .5" class="clickable" id="GmailIcon"></a-image>
+
 
   <!-- Toggle *Change this to UI transition with listener to forest* -->
   <>
+  
 </a-scene>
 
 </body>
