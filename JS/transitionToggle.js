@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-    // Toggle between AR and forest scene
+// Toggle between AR and forest scene
 document.addEventListener('DOMContentLoaded', () => {
     let isARMode = true; // Set forest not active
     const forest = document.getElementById('forest-scene');
