@@ -1,7 +1,7 @@
 {
     "name": "webxrbusinesscard",
-    "version": "1.0.0",
-    "description": "A web-based AR experience to designed to reimagine a business card",
+    "version": "1.1.15",
+    "description": "A web-based AR experience designed to reimagine a business card",
     "repository": {
       "type": "git",
       "url": "https://srixx24.github.io/WebXRBusinessCard/",
