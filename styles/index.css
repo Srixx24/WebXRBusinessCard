@@ -27,6 +27,9 @@ body { margin: 0; overflow: hidden; }
         background-color: rgba(230, 190, 250, 0.8);
     }
 }
+#AR-camera, #forest-scene {
+    display: none;
+}
 .cloud {
     position: absolute;
     width: 10rem;

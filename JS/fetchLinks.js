@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             titleText.setAttribute('value', contact.title);
             titleText.setAttribute('fontSize', '2');
             titleText.setAttribute('color', '#000000');
-            titleText.setAttribute('position', '-0.9 2 0');
+            titleText.setAttribute('position', '-0.9 2 0.1');
         
             // Create a-text element for description
             const descriptionText = document.createElement('a-text');

@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             titleText.setAttribute('value', project.title);
             titleText.setAttribute('fontSize', '2');
             titleText.setAttribute('color', '#000000');
-            titleText.setAttribute('position', '-1.7 2 0');
+            titleText.setAttribute('position', '-1.7 2 0.1');
         
             // Create a-text element for description
             const descriptionText = document.createElement('a-text');

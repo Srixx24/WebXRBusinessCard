@@ -24,7 +24,7 @@ function displayBio(bio) {
     const linkText = document.createElement('a-text');
     linkText.setAttribute('value', 'View Resume');
     linkText.setAttribute('color', '#000000');
-    linkText.setAttribute('position', '-0.6 -2.3 0');
+    linkText.setAttribute('position', '-0.6 -2.3 0.1');
     linkText.setAttribute('class', 'clickable');
 
     // Listener for links
