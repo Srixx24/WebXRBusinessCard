@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Jackie Lovins Business Card</title>
@@ -9,15 +10,12 @@
     <!-- Links -->
     <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/index.css">
+
     <!-- Scripts -->
-    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <script src="https://srixx24.github.io/WebXRBusinessCard/Packages/A-Frame_Environments/dist/aframe-environment-component.min.js"></script>
     <script src="JS/transitionToggle.js"></script>
-    <script src="JS/tabAnimationEvents.js"></script>
-    <script src="JS/fetchBio.js"></script>
-    <script src="JS/fetchLinks.js"></script>
-    <script src="JS/fetchProjects.js"></script>
+    <script src="Scenes/forest.html"></script>
 </head>
 <body>
 
@@ -26,22 +24,10 @@
 <!-- Welcome screen only -->
 <div class="welcome-screen" id="welcome-screen">
   <div style="display: flex;flex-direction: column;align-items: center;">
-    <div>Welcome to my portfolio</div>
+    <div>Welcome to my Digital Business Card</div>
     <div><img id="logo" src="Images/LovinsLogo.png" width="200" alt="Lovins Logo"></div>
   </div>
-  <div id="cloud-container" class="cloud-container" style="
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  flex-direction: row;
-  justify-content: center;
-  align-content: flex-start;
-">
+  <div id="cloud-container" class="cloud-container">
     <div class="cloud halftone" style="top: 10%; left: -100px; background-image: url('Images/Cloud1.png');animation-delay: 5s;"></div>
     <div class="cloud halftone" style="top: 25%; left: -100px; background-image: url('Images/Cloud4.png');"></div>
     <div class="cloud halftone" style="top: 45%; left: -100px; background-image: url('Images/Cloud5.png');animation-delay: 3s;"></div>
@@ -56,89 +42,14 @@
     <a-cursor></a-cursor>
   </a-camera>
 
-  <!-- Toggle -->
-  <a-entity id="Scene-toggle" geometry="primitive: dodecahedron; radius: 0.8" material="color: #0a0a0a; shader: flat" position="0 0 -1" class="clickable" shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000" animation="property: rotation; to: 0 360 0; loop: true; dur: 8000; easing: linear">
-    <a-text text="" fontsize="0.5" position="0 0 0" wrap-count="47" color="#FFFFFF" width="1.5" height="1.5" value="Toggle"></a-text>
-  </a-entity>
+  <!-- ADD Links, my name and email-->
+  <a-assets></a-assets>
+  <a-text></a-text>
+  <a-image></a-image>
 
-  <!-- Project Highlights -->
-  <a-entity id="project-highlights" position="-4 1.5 -3" rotation="0 50 0" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #FA8572; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable" shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000">
-    <a-text value="Project Highlights" align="center" position="0 0 0.1" color="#FFFFFF"></a-text>
-  </a-entity>
-
-  <!-- About Me -->
-  <a-entity id="about-me" position="0 1.5 -4.5" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #B24968; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable" shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000">
-    <a-text value="About Me" align="center" position="0 0 0.1" color="#FFFFFF"></a-text>
-  </a-entity>
-
-  <!-- Connect With Me -->
-  <a-entity id="connect-with-me" position="4 1.5 -3" rotation="0 -50 0" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #6C3779; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable"shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000">
-    <a-text value="Connect With Me" align="center" position="0 0 0.1" color="#FFFFFF"></a-text>
-  </a-entity>
-
-  <!-- Content Containers-->
-  <a-entity id="project-container" position="-4 3 -5" rotation="0 50 0" geometry="primitive: plane; height: 5; width: 4" material="color: #FA8572; shader: flat" visible="false"></a-entity>
-  <a-entity id="contact-container" position="4 3 -5" rotation="0 -50 0" geometry="primitive: plane; height: 5; width: 4" material="color: #6C3779; shader: flat" visible="false"></a-entity>
-  <a-entity id="bio-container" position="0 3 -6" geometry="primitive: plane; height: 5; width: 4" material="color: #B24968; shader: flat" visible="false">
-    <a-text value="About Me"color="#000000" position="-0.6 2.2 0.1" text=""></a-text>
-    <a-text text="" fontsize="0.5" position="-1.8 0.6 0.1" wrap-count="47" color="#000000" width="3.7" height="4.6" value="Ever since I was a child, I have been captivated by the power of creation. Whether it was constructing intricate structures with Legos or crafting virtual houses on Sims, the joy of envisioning something and bringing it to life has always been my true passion. It's this passion that has driven me to pursue my education in the AR/VR program at Atlas School. I aspire to transform this passion into something truly great. While my primary focus lies in game development, the skills I have gained in over a decade of management have sparked my interest in project management. Additionally, since creation does hold such a strong place in my life, I have been leaning toward asset design and development as well. While I remain open to all possibilities within the gaming industry, I have begun to carve a path in these directions. I am ready to embrace the challenges and opportunities that come my way. With an open mind and a hunger for learning, I look forward to the endless possibilities that lie ahead."></a-text>
-    <a-image src="Images/Headshot.png" position="0 -1.5 0.5" width="1.5" height="1.2" material="" geometry=""></a-image>
-  </a-entity>
+  <!-- Toggle *Change this to UI transition with listener to forest* -->
+  <>
 </a-scene>
-
-<div class="a-enter-vr fullscreen" aframe-injected="" style="position: fixed;">
-  <div class="Toggle-label" id="Toggle-label" aframe-injected="">Press the black rock to go to Forest</div>
-</div>
-
-<!-- Start Forest Scene -->
-<a-scene id="forest-scene" overlay-visibility="" class="fullscreen">
-  <a-entity environment="fog: 0.83; lightPosition: 0 -4.8 -0.46; dressingColor: #00ff11; dressingUniformScale: false; dressingAmount: 100; dressing: trees; grid: none; horizonColor: #edb02c; lighting: point; skyType: atmosphere; groundTexture: walkernoise; groundColor2: #09ec18; groundColor: #13722f; active: true; skyColor: #88c; preset: starry"> 
-    <a-entity position="0 50 0" light="intensity: 0.1; angle: 60.65; groundColor: #13722f; color: #c3c3e5; type: point"></a-entity>
-    <a-entity position="0 -0.15 -5.8" light="type: point; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10; intensity: 0.087"></a-entity>
-    <a-entity rotation="-90 0 0" class="environmentGround" scale="1 1 3" shadow="cast: false; receive: false"></a-entity>
-    <a-sky radius="200" theta-length="110" position="0 0 9.091" material="sunPosition: 0 -0.025853424423087495 -0.9996657443593832;"></a-sky>
-    <a-entity id="stars" scale="0.89 0.51 1"></a-entity>
-  </a-entity>
-
-  <!-- Audio -->
-  <a-sound src="url(https://srixx24.github.io/WebXRBusinessCard/Packages/Elements/Fairy Dust.wav)" autoplay="true" loop="true" volume="1.0"></a-sound>
-    
-  <!-- User controls/position -->
-  <a-camera position="0 1.6 2" look-controls="">
-    <a-cursor raycaster= "objects: clickable"></a-cursor>
-  </a-camera>
-
-  <!-- Toggle -->
-  <a-entity id="Scene-toggle" geometry="primitive: dodecahedron; radius: 0.8" material="color: #0a0a0a; shader: flat" position="0 0 -1" class="clickable" shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000" animation="property: rotation; to: 0 360 0; loop: true; dur: 8000; easing: linear">
-    <a-text text="" fontsize="0.5" position="0 0 0" wrap-count="47" color="#FFFFFF" width="1.5" height="1.5" value="Toggle"></a-text>
-  </a-entity>
-
-  <!-- Project Highlights -->
-  <a-entity id="project-highlights" position="-4 1.5 -3" rotation="0 50 0" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #FA8572; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable" shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000">
-    <a-text value="Project Highlights" align="center" position="0 0 0.1" color="#FFFFFF"></a-text>
-  </a-entity>
-
-  <!-- About Me -->
-  <a-entity id="about-me" position="0 1.5 -4.5" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #B24968; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable" shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000">
-    <a-text value="About Me" align="center" position="0 0 0.1" color="#FFFFFF"></a-text>
-  </a-entity>
-
-  <!-- Connect With Me -->
-  <a-entity id="connect-with-me" position="4 1.5 -3" rotation="0 -50 0" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #6C3779; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable" shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000">
-    <a-text value="Connect With Me" align="center" position="0 0 0.1" color="#FFFFFF"></a-text>
-  </a-entity>
-
-  <!-- Content Containers-->
-  <a-entity id="project-container" position="-4 3 -5" rotation="0 50 0" geometry="primitive: plane; height: 5; width: 4" material="color: #FA8572; shader: flat" visible="false"></a-entity>
-  <a-entity id="contact-container" position="4 3 -5" rotation="0 -50 0" geometry="primitive: plane; height: 5; width: 4" material="color: #6C3779; shader: flat" visible="false"></a-entity>
-  <a-entity id="bio-container" position="0 3 -6" geometry="primitive: plane; height: 5; width: 4" material="color: #B24968; shader: flat" visible="false">
-    <a-text value="About Me"color="#000000" position="-0.6 2.2 0.1" text=""></a-text>
-    <a-text text="" fontsize="0.5" position="-1.8 0.6 0.1" wrap-count="47" color="#000000" width="3.7" height="4.6" value="Ever since I was a child, I have been captivated by the power of creation. Whether it was constructing intricate structures with Legos or crafting virtual houses on Sims, the joy of envisioning something and bringing it to life has always been my true passion. It's this passion that has driven me to pursue my education in the AR/VR program at Atlas School. I aspire to transform this passion into something truly great. While my primary focus lies in game development, the skills I have gained in over a decade of management have sparked my interest in project management. Additionally, since creation does hold such a strong place in my life, I have been leaning toward asset design and development as well. While I remain open to all possibilities within the gaming industry, I have begun to carve a path in these directions. I am ready to embrace the challenges and opportunities that come my way. With an open mind and a hunger for learning, I look forward to the endless possibilities that lie ahead."></a-text>
-    <a-image src="Images/Headshot.png" position="0 -1.5 0.5" width="1.5" height="1.2" material="" geometry=""></a-image>
-  </a-entity>
-</a-scene>
-
-
 
 </body>
 </html>
