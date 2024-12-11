@@ -28,6 +28,12 @@ function displayBio(bio) {
     linkText.setAttribute('class', 'clickable');
 
     // Listener for links
+    linkText.addEventListener('mouseenter', () => {
+        linkText.setAttribute('color', '#099631');
+    });
+    linkText.addEventListener('mouseleave', () => {
+        linkText.setAttribute('color', '#000000');
+    });
     linkText.addEventListener('click', () => {
         window.open(bio.link, '_blank');
     });

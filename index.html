@@ -57,22 +57,22 @@
   </a-camera>
 
   <!-- Toggle -->
-  <a-entity id="Scene-toggle" geometry="primitive: dodecahedron; radius: 0.8" material="color: #0a0a0a; shader: flat" position="0 0 -1" class="clickable" animation="property: rotation; to: 0 360 0; loop: true; dur: 8000; easing: linear">
+  <a-entity id="Scene-toggle" geometry="primitive: dodecahedron; radius: 0.8" material="color: #0a0a0a; shader: flat" position="0 0 -1" class="clickable" shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000" animation="property: rotation; to: 0 360 0; loop: true; dur: 8000; easing: linear">
     <a-text text="" fontsize="0.5" position="0 0 0" wrap-count="47" color="#FFFFFF" width="1.5" height="1.5" value="Toggle"></a-text>
   </a-entity>
 
   <!-- Project Highlights -->
-  <a-entity id="project-highlights" position="-4 1.5 -3" rotation="0 50 0" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #FA8572; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable">
+  <a-entity id="project-highlights" position="-4 1.5 -3" rotation="0 50 0" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #FA8572; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable" shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000">
     <a-text value="Project Highlights" align="center" position="0 0 0.1" color="#FFFFFF"></a-text>
   </a-entity>
 
   <!-- About Me -->
-  <a-entity id="about-me" position="0 1.5 -4.5" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #B24968; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable">
+  <a-entity id="about-me" position="0 1.5 -4.5" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #B24968; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable" shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000">
     <a-text value="About Me" align="center" position="0 0 0.1" color="#FFFFFF"></a-text>
   </a-entity>
 
   <!-- Connect With Me -->
-  <a-entity id="connect-with-me" position="4 1.5 -3" rotation="0 -50 0" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #6C3779; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable">
+  <a-entity id="connect-with-me" position="4 1.5 -3" rotation="0 -50 0" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #6C3779; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable"shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000">
     <a-text value="Connect With Me" align="center" position="0 0 0.1" color="#FFFFFF"></a-text>
   </a-entity>
 
@@ -104,27 +104,27 @@
   <a-sound src="url(https://srixx24.github.io/WebXRBusinessCard/Packages/Elements/Fairy Dust.wav)" autoplay="true" loop="true" volume="1.0"></a-sound>
     
   <!-- User controls/position -->
-  <a-camera position="0 1.6 0" look-controls="">
-    <a-cursor></a-cursor>
+  <a-camera position="0 1.6 2" look-controls="">
+    <a-cursor raycaster= "objects: clickable"></a-cursor>
   </a-camera>
 
   <!-- Toggle -->
-  <a-entity id="Scene-toggle" geometry="primitive: dodecahedron; radius: 0.8" material="color: #0a0a0a; shader: flat" position="0 0 -1" class="clickable" animation="property: rotation; to: 0 360 0; loop: true; dur: 8000; easing: linear">
+  <a-entity id="Scene-toggle" geometry="primitive: dodecahedron; radius: 0.8" material="color: #0a0a0a; shader: flat" position="0 0 -1" class="clickable" shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000" animation="property: rotation; to: 0 360 0; loop: true; dur: 8000; easing: linear">
     <a-text text="" fontsize="0.5" position="0 0 0" wrap-count="47" color="#FFFFFF" width="1.5" height="1.5" value="Toggle"></a-text>
   </a-entity>
 
   <!-- Project Highlights -->
-  <a-entity id="project-highlights" position="-4 1.5 -3" rotation="0 50 0" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #FA8572; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable">
+  <a-entity id="project-highlights" position="-4 1.5 -3" rotation="0 50 0" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #FA8572; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable" shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000">
     <a-text value="Project Highlights" align="center" position="0 0 0.1" color="#FFFFFF"></a-text>
   </a-entity>
 
   <!-- About Me -->
-  <a-entity id="about-me" position="0 1.5 -4.5" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #B24968; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable">
+  <a-entity id="about-me" position="0 1.5 -4.5" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #B24968; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable" shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000">
     <a-text value="About Me" align="center" position="0 0 0.1" color="#FFFFFF"></a-text>
   </a-entity>
 
   <!-- Connect With Me -->
-  <a-entity id="connect-with-me" position="4 1.5 -3" rotation="0 -50 0" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #6C3779; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable">
+  <a-entity id="connect-with-me" position="4 1.5 -3" rotation="0 -50 0" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #6C3779; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable" shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000">
     <a-text value="Connect With Me" align="center" position="0 0 0.1" color="#FFFFFF"></a-text>
   </a-entity>
 
