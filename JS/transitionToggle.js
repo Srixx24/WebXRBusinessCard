@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 welcomeScreen.style.display = 'none';
                 logo.style.display = 'none';
                 overlay.style.display = 'none';
-                forestScene.style.display = 'none';
                 arScene.style.display = 'block';
             }, 1000);
         });
