@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isARMode) {
                 forestScene.style.display = 'none';
                 arScene.style.display = 'block'; // Show AR camera scene
-                document.getElementById('Toggle-label').setAttribute('value', 'Press Black Dice to go to Forest');
+                document.getElementById('Toggle-label').setAttribute('value', 'Press black rock to go to Forest');
             } else {
                 arScene.style.display = 'none';
                 forestScene.style.display = 'block'; // Show forest scene
-                document.getElementById('Toggle-label').setAttribute('value', 'Press Black Dice to go to AR View');
+                document.getElementById('Toggle-label').setAttribute('value', 'Press black rock to go to AR View');
             }
         });
     }

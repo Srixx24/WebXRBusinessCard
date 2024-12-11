@@ -30,6 +30,19 @@ body { margin: 0; overflow: hidden; }
 #AR-camera, #forest-scene {
     display: none;
 }
+.Toggle-label {
+    color: #B24968;
+    background: #6C5FA7;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 2em;
+    font-family: "Parkinsans", sans-serif;
+    font-weight: 150;
+}
 .cloud {
     position: absolute;
     width: 10rem;
