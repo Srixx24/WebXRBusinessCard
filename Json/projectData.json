@@ -5,25 +5,25 @@
         {
             "title": "Realms of Reality Portal\nGoogle Chrome Extension",
             "description": "A custom Chrome extension featuring dynamic backgrounds, a weather widget, inspirational quotes, a time display, a Google search bar, and a collection of useful links. This project aims to provide users with a visually appealing and functional dashboard every time they open their browsers.",
-            "image": "Images/ChromeExt1.png",
+            "image": "Assets/ChromeExt1.png",
             "link": "https://github.com/Srixx24/Hacksprint"
         },
         {
             "title": "Boo's Haunted Hop\n3D Platformer",
             "description": "An engaging 3D platformer mini-game built with Unity, featuring three-levels of interactive environments where the user jumps from platform to platform to reach the flag at the top of the map. During gameplay, a timer tracks until the flag is found in all three rounds.",
-            "image": "Images/Platformer.png",
+            "image": "Assets/Platformer.png",
             "link": "https://github.com/Srixx24/atlas-unity/tree/main/unity-audio"
         },
         {
             "title": "Virtual Beach Vibes\nVR 360 Video",
             "description": "A VR experience developed for Meta Quest in a Tropical theme. The program comes complete with a VR-friendly user interface, robust video playback system, smooth transitions between videos, four video worlds to view, and a little humor in the UI content. All this together helps the user feel as if they've gone on a mini tropical vacation, with no sunscreen required!",
-            "image": "Images/360Vid.png",
+            "image": "Assets/360Vid.png",
             "link": "https://github.com/Srixx24/atlas-unity-virtual-reality/tree/main/360-video"
         },
         {
             "title": "Slimeageddon: Street Hunter\nAR Slingshot",
             "description": "An AR slingshot mobile app developed with Unity 6 for Android and iOS where players hunt slimes in real-world settings. This apps key features include horizontal plane detection, target spawning within real-world spaces, projectile launching, and an intricate UI system.",
-            "image": "Images/TitleScreen.png",
+            "image": "Assets/TitleScreen.png",
             "link": "https://github.com/Srixx24/atlas-unity/tree/main/unity-ar_slingshot_game"
         }
     ]

@@ -1,3 +1,5 @@
+// Sets up all content for project container
+
 document.addEventListener('DOMContentLoaded', () => {  
     fetch('Json/projectData.json')
         .then(response => response.json())

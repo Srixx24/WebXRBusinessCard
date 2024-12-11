@@ -1,4 +1,4 @@
-// Set up link for Bio container
+// Sets up link for Bio container
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch('Json/bioData.json')

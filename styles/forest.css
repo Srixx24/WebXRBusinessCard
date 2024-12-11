@@ -1,0 +1,26 @@
+.forest-label {
+    color: #B24968;
+    background: #6C5FA7;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 2em;
+    font-family: "Parkinsans", sans-serif;
+    font-weight: 150;
+}
+.forest-toggle {
+    background: #6C5FA7;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
+}
+#forest-scene {
+    display: none;
+}
+/*@media (max-width: 600px) {}  add mobile settings later */

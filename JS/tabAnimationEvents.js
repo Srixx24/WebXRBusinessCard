@@ -1,4 +1,5 @@
-// Handles ring animations and click events for the three info tabs
+// Handles ring animations and click events for the three
+// info tabs in forest scene only
 
 document.addEventListener('DOMContentLoaded', () => {
     const projectHighlights = document.getElementById('project-highlights');
