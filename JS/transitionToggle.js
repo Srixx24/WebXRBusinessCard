@@ -26,17 +26,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Toggle between AR and forest scene
         let isARMode = true;
-        document.getElementById('Scene-toggle').addEventListener('click', () => {
-            isARMode = !isARMode;
+        
+        // AR scene toggle
+        document.getElementById('ar-toggle').addEventListener('click', () => {
 
             if (isARMode) {
-                forestScene.style.display = 'none';
-                arScene.style.display = 'block'; // Show AR camera scene
-                document.getElementById('Toggle-label').setAttribute('value', 'Press black rock to go to Forest');
-            } else {
                 arScene.style.display = 'none';
-                forestScene.style.display = 'block'; // Show forest scene
-                document.getElementById('Toggle-label').setAttribute('value', 'Press black rock to go to AR View');
+                forestScene.style.display = 'block';
+                document.getElementById('forest-label').setAttribute('value', 'Press black rock to go to AR View');
+                isARMode = false; // Update to Forest
+            }
+        });
+        // Forest scene toggle
+        document.getElementById('forest-toggle').addEventListener('click', () => {
+
+            if (!isARMode) {
+                forestScene.style.display = 'none';
+                arScene.style.display = 'block';
+                document.getElementById('ar-label').setAttribute('value', 'Press the kitten to go to Forest');
+                isARMode = true; // Update to AR
             }
         });
     }

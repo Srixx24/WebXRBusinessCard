@@ -27,10 +27,10 @@ body { margin: 0; overflow: hidden; }
         background-color: rgba(230, 190, 250, 0.8);
     }
 }
-#AR-camera, #forest-scene {
+#AR-camera{
     display: none;
 }
-.Toggle-label {
+.ar-label {
     color: #B24968;
     background: #6C5FA7;
     opacity: 1;
@@ -42,6 +42,15 @@ body { margin: 0; overflow: hidden; }
     font-size: 2em;
     font-family: "Parkinsans", sans-serif;
     font-weight: 150;
+}
+.ar-toggle {
+    background: #6C5FA7;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
 }
 .cloud {
     position: absolute;

@@ -9,7 +9,7 @@
 
     <!-- Links -->
     <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="stylesheet" type="text/css" href="styles/forest.css">
     <!-- Scripts -->
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://srixx24.github.io/WebXRBusinessCard/Packages/A-Frame_Environments/dist/aframe-environment-component.min.js"></script>
@@ -40,7 +40,7 @@
     </a-camera>
   
     <!-- Toggle -->
-    <a-entity id="Scene-toggle" geometry="primitive: dodecahedron; radius: 0.8" material="color: #0a0a0a; shader: flat" position="0 0 -1" class="clickable" shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000" animation="property: rotation; to: 0 360 0; loop: true; dur: 8000; easing: linear">
+    <a-entity id="forest-toggle" geometry="primitive: dodecahedron; radius: 0.8" material="color: #0a0a0a; shader: flat" position="0 0 -1" class="clickable" shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000" animation="property: rotation; to: 0 360 0; loop: true; dur: 8000; easing: linear">
       <a-text text="" fontsize="0.5" position="0 0 0" wrap-count="47" color="#FFFFFF" width="1.5" height="1.5" value="Toggle"></a-text>
     </a-entity>
   
@@ -70,7 +70,7 @@
   </a-scene>
 
   <div class="a-enter-vr fullscreen" aframe-injected="" style="position: fixed;">
-    <div class="Toggle-label" id="Toggle-label" aframe-injected="">Press the black rock to go to AR View</div>
+    <div class="forest-label" id="forest-label" aframe-injected="">Press the black rock to go to AR View</div>
   </div>
 
 </body>
