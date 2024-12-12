@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const githubIcon = document.getElementById('Github');
     const linkedinIcon = document.getElementById('Linkedin');
-    const gmailIcon = document.getElementById('GmailIcon');
+    const gmailIcon = document.getElementById('Gmail');
     const toggleIcon = document.getElementById('Toggle');
 
     githubIcon.addEventListener('click', function() {
@@ -14,5 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     gmailIcon.addEventListener('click', function() {
         window.open('mailto:jacolynlovins@gmail.com');
+    });
+    toggleIcon.addEventListener('click', function() {
+        window.location.href = 'forest.html';
     });
 });

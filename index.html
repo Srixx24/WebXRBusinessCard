@@ -16,7 +16,12 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="JS/transitionToggle.js"></script>
     <script src="JS/arIcons.js"></script>
-
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
   </head>
   <body>
 
@@ -40,9 +45,11 @@
   </div>
 
   <!-- Start AR Camera Scene -->
-  <a-scene id="AR-camera" overlay-visibility="" xr="enabled: true" vr-mode-ui="enabled: false;" embedded arjs="sourceType: webcam;" renderer="precision: medium;">
-    <a-camera position="0 1.6 2" look-controls="">
-      <a-cursor></a-cursor>
+  <a-scene id="AR-camera" overlay-visibility="" vr-mode-ui="enabled: false;" embedded arjs="sourceType: webcam;" cursor="rayOrigin: mouse" raycaster="objects: .clickable;">
+    
+    <!-- Camera Values -->
+    <a-camera position="0 0 0" look-controls="touchEnabled: false">
+      <a-cursor color="#FF0000" radius="0.02" position="0 0 -1"></a-cursor>
     </a-camera>
 
     <!-- Preload Assets-->
@@ -53,16 +60,16 @@
       <img id="#KittyToggle" src="Assets/KittyToggle.png" alt="Toggle">
     </a-assets>
 
-    <!-- Info and Links -->
+    <!-- Info -->
     <a-text value="Jackie Lovins" fontsize="2" position="0 0 0" wrap-count="47" color="#6C5FA7" width="1.5" height="1.5"></a-text>
     <a-text value="Game Dev" fontsize="1" position="0 -1 0" wrap-count="47" color="#6C5FA7" width="1.5" height="1.5"></a-text>
     
-    <a-image src="#GithubImage" position="0 1 -5" scale=".5 .5 .5" class="clickable" id="Github"></a-image>
-    <a-image src="#LinkedinImage" position="0 0 -5" scale=".5 .5 .5" class="clickable" id="Linkedin"></a-image>
-    <a-image src="#GmailImage" position="0 -1 -5" scale=".5 .5 .5" class="clickable" id="GmailIcon"></a-image>
-
-    <!-- Toggle -->
+    <!-- Links and Toggle -->
+    <a-image src="#GithubImage" position="0 1 -5" scale="0.5 0.5 0.5" class="clickable" id="Github"></a-image>
+    <a-image src="#LinkedinImage" position="0 0 -5" scale="0.5 0.5 0.5" class="clickable" id="Linkedin"></a-image>
+    <a-image src="#GmailImage" position="0 -1 -5" scale="0.5 0.5 0.5" class="clickable" id="Gmail"></a-image>
     <a-image src="#KittyToggle" position="-1 0 -6" scale="0.4 0.4 0.4" class="clickable" id="Toggle"></a-image>
+  
   </a-scene>
 
   <div class="a-enter-vr fullscreen" aframe-injected="" style="position: fixed;">

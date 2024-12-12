@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const welcomeScreen = document.getElementById('welcome-screen');
     const logo = document.getElementById('logo');
     const arScene = document.getElementById('AR-camera');
-    const forestScene = document.getElementById('forest-scene');
 
     // Check if elements exist before adding event listeners
     if (overlay && welcomeScreen && logo && arScene && forestScene) {
@@ -21,30 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 overlay.style.display = 'none';
                 arScene.style.display = 'block';
             }, 1000);
-        });
-
-        // Toggle between AR and forest scene
-        let isARMode = true;
-        
-        // AR scene toggle
-        document.getElementById('ar-toggle').addEventListener('click', () => {
-
-            if (isARMode) {
-                arScene.style.display = 'none';
-                forestScene.style.display = 'block';
-                document.getElementById('forest-label').setAttribute('value', 'Press black rock to go to AR View');
-                isARMode = false; // Update to Forest
-            }
-        });
-        // Forest scene toggle
-        document.getElementById('forest-toggle').addEventListener('click', () => {
-
-            if (!isARMode) {
-                forestScene.style.display = 'none';
-                arScene.style.display = 'block';
-                document.getElementById('ar-label').setAttribute('value', 'Press the kitten to go to Forest');
-                isARMode = true; // Update to AR
-            }
         });
     }
 });

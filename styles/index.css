@@ -43,15 +43,6 @@ body { margin: 0; overflow: hidden; }
     font-family: "Parkinsans", sans-serif;
     font-weight: 150;
 }
-.ar-toggle {
-    background: #6C5FA7;
-    opacity: 1;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: baseline;
-}
 .cloud {
     position: absolute;
     width: 10rem;
