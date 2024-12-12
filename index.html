@@ -14,6 +14,7 @@
     <!-- Scripts -->
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://unpkg.com/aframe-rounded-corners-component/dist/aframe-rounded-corners.min.js"></script>
     <script src="JS/transitionToggle.js"></script>
     <script src="JS/arIcons.js"></script>
   </head>
@@ -52,17 +53,20 @@
         <img id="#KittyToggle" src="Assets/KittyToggle.png" alt="Toggle">
       </a-assets>
 
+      <!-- Card -->
+      <a-entity geometry="primitive: plane; width: 2; height: 1" material="color: #333; shader: flat" position="0 0 -4"></a-entity>
+
       <!-- Info -->
-      <a-text value="Jackie Lovins" fontsize="2" position="0 0 2" color="#6C5FA7" width="1.5" height="1.5"></a-text>
-      <a-text id="ar-label" value="Game Dev" fontsize="1" position="0 -1 2" color="#6C5FA7" width="1.5" height="1.5"></a-text>
+      <a-text value="Jackie Lovins" fontsize="2" position="0 0 -3.9" color="#6C5FA7" width="1.5" height="1.5"></a-text>
+      <a-text id="ar-label" value="Game Dev" fontsize="1" position="0 -1 -3.9" color="#6C5FA7" width="1.5" height="1.5"></a-text>
       
       <!-- Links and Toggle -->
-      <a-image src="#GithubImage" position="0 1 -5" scale="0.5 0.5 0.5" class="clickable" id="Github"></a-image>
-      <a-image src="#LinkedinImage" position="0 0 -5" scale="0.5 0.5 0.5" class="clickable" id="Linkedin"></a-image>
-      <a-image src="#GmailImage" position="0 -1 -5" scale="0.5 0.5 0.5" class="clickable" id="Gmail"></a-image>
-      <a-image src="#KittyToggle" position="-1 0 -6" scale="0.4 0.4 0.4" class="clickable" id="Toggle"></a-image>
+      <a-image src="#GithubImage" position="0 1 -3.9" scale="0.5 0.5 0.5" class="clickable" id="Github"></a-image>
+      <a-image src="#LinkedinImage" position="0 0 -3.9" scale="0.5 0.5 0.5" class="clickable" id="Linkedin"></a-image>
+      <a-image src="#GmailImage" position="0 -1 -3.9" scale="0.5 0.5 0.5" class="clickable" id="Gmail"></a-image>
+      <a-image src="#KittyToggle" position="-1 0 -3.9" scale="0.4 0.4 0.4" class="clickable" id="Toggle"></a-image>
     
-      <a-text value="Press the kitten to go to Forest" fontsize="1" position="0 -1 2" color="#6C5FA7" width="1.5" height="1.5"></a-text>
+      <a-text value="Press the kitten to go to Forest" fontsize="1" position="-0.5 -1.4 -3.9" color="#6C5FA7" width="1.5" height="1.5"></a-text>
     </a-scene>
   </body>
 </html>

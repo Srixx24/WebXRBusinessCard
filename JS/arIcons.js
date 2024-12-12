@@ -16,6 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
         window.open('mailto:jacolynlovins@gmail.com');
     });
     toggleIcon.addEventListener('click', function() {
-        window.location.href = 'Scenes/forest.html';
+        window.location.href = 'forest.html';
     });
 });
