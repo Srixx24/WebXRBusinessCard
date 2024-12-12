@@ -14,7 +14,6 @@
     <!-- Scripts -->
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <script src="https://unpkg.com/aframe-rounded-corners-component/dist/aframe-rounded-corners.min.js"></script>
     <script src="JS/transitionToggle.js"></script>
     <script src="JS/arIcons.js"></script>
   </head>
@@ -42,7 +41,7 @@
       
       <!-- Camera Values -->
       <a-camera position="0 0 0" look-controls="touchEnabled: false">
-        <a-cursor color="#FF0000" radius="0.02" position="0 0 -1"></a-cursor>
+        <a-cursor id="custom-cursor" color="#FF0000" radius="0.02" position="0 0 -1"></a-cursor>
       </a-camera>
 
       <!-- Preload Assets-->
@@ -54,7 +53,7 @@
       </a-assets>
 
       <!-- Card -->
-      <a-entity rounded-corners="radius: 0.1" geometry="primitive: plane; width: 2; height: 1" material="color: #333; shader: flat" position="0 0 -4"></a-entity>
+      <a-entity geometry="primitive: plane; width: 2; height: 1" material="color: #333; shader: flat; opacity: 0.92;" position="0 0 -4"></a-entity>
 
       <!-- Info -->
       <a-text value="Jackie Lovins" position="-0.27 .22 -3.9" color="#6C5FA7" width="3.2" height="3"></a-text>
