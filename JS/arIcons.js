@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Forest Scene events
     toggleIcon.addEventListener('click', function() {
-        window.location.href = 'Scenes/forest.html';
+        window.location.href = 'forest.html';
     });
     toggleIcon.addEventListener('mouseenter', () => {
         changeCursorColor('#099631');
