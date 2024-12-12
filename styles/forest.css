@@ -27,4 +27,21 @@ body {
 #forest-scene {
     display: none;
 }
+.socialLinks {
+    display: flex; /* Aligns the social links in a row */
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.socialLink {
+    text-align: center;
+    margin: 10px; /* Adjusts spacing between links */
+}
+.socialLinks img {
+    width: 40px;
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.2s; /* Smooth scaling effect */
+}
+.socialLinks img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
 /*@media (max-width: 600px) {}  add mobile settings later */

@@ -130,24 +130,10 @@ body {
 a-scene {
     display: none;
 }
-.socialLinks {
-    display: flex; /* Aligns the social links in a row */
-    justify-content: space-around;
-    flex-wrap: wrap;
+@font-face {
+    font-family: 'TitleFont';
+    src: url('Fonts/Parkinsans-SemiBold.ttf') format('truetype');
 }
-.socialLink {
-    text-align: center;
-    margin: 10px; /* Adjusts spacing between links */
-}
-.socialLinks img {
-    width: 40px;
-    height: auto; /* Maintain aspect ratio */
-    transition: transform 0.2s; /* Smooth scaling effect */
-}
-.socialLinks img:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
-}
-
 /* Mobile setting could use adusting still, come back later */
 @media (max-width: 600px) {
     .welcome-screen {
