@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Forest Scene events
     toggleIcon.addEventListener('click', function() {
-        window.location.href = 'forest.html';
+        window.location.href = 'https://srixx24.github.io/WebXRBusinessCard/Srixx24/WebXRBusinessCard/forest.html';
     });
     toggleIcon.addEventListener('mouseenter', () => {
         changeCursorColor('#099631');
