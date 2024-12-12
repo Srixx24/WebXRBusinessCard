@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const arScene = document.getElementById('AR-camera');
 
     // Check if elements exist before adding event listeners
-    if (overlay && welcomeScreen && logo && arScene && forestScene) {
+    if (overlay && welcomeScreen && logo && arScene) {
         overlay.addEventListener('click', () => {
             // Fade out welcome screen and logo
             welcomeScreen.style.opacity = '0';

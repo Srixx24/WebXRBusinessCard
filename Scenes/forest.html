@@ -39,11 +39,6 @@
       <a-cursor raycaster= "objects: clickable"></a-cursor>
     </a-camera>
   
-    <!-- Toggle -->
-    <a-entity id="forest-toggle" geometry="primitive: dodecahedron; radius: 0.8" material="color: #0a0a0a; shader: flat" position="0 0 -1" class="clickable" shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000" animation="property: rotation; to: 0 360 0; loop: true; dur: 8000; easing: linear">
-      <a-text text="" fontsize="0.5" position="0 0 0" wrap-count="47" color="#FFFFFF" width="1.5" height="1.5" value="Toggle"></a-text>
-    </a-entity>
-  
     <!-- Project Highlights -->
     <a-entity id="project-highlights" position="-4 1.5 -3" rotation="0 50 0" geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 1" material="color: #FA8572; shader: flat" animation="property: scale; to: 1.1 1.1 1; dir: alternate; dur: 1000; loop: true;" class="clickable" shadow event-set__enter="_event: mouseenter; color: #099631" event-set__leave="_event: mouseleave; color: #000000">
       <a-text value="Project Highlights" align="center" position="0 0 0.1" color="#FFFFFF"></a-text>
@@ -69,11 +64,12 @@
     </a-entity>
   </a-scene>
 
+  <!-- Toggle -->
   <div class="a-enter-vr fullscreen" aframe-injected="" style="position: fixed;">
-    <div class="forest-label" id="forest-label" aframe-injected="">Press the black rock to go to AR View</div>
-  </div>
-  <div id="ar-toggle">
-    <button onclick="MoveToAR()">button name</button>
+    <div class="forest-label" id="forest-label" aframe-injected="">Press to go to AR View</div>
+    <div id="ar-toggle">
+      <button onclick="MoveToAR()">Move to AR</button>
+    </div>
   </div>
   <script>
     // Toggle to AR scene
