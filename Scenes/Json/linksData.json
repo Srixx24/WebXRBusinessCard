@@ -6,21 +6,21 @@
             "description": "A collection of all my work so far.",
             "link": "https://github.com/Srixx24/",
             "linkName": "Github",
-            "image": "Scenes/ForestAssets/github.png"
+            "image": "ForestAssets/githubForest.png"
         },
         {
             "title": "Connect With Me",
             "description": "My professional social media address.",
             "link": "https://www.linkedin.com/in/jackielovins/",
             "linkName": "Linkedin",
-            "image": "Scenes/ForestAssets/Linkedin.png"
+            "image": "ForestAssets/LinkedinForest.png"
         },
         {
             "title": "Connect With Me",
             "description": "Feel free to email me with business-related questions.",
             "link": "mailto:jacolynlovins@gmail.com",
             "linkName": "Gmail",
-            "image": "Scenes/ForestAssets/Gmail.png"
+            "image": "ForestAssets/GmailForest.png"
         }
     ]
 }
