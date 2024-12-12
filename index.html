@@ -18,57 +18,51 @@
     <script src="JS/arIcons.js"></script>
   </head>
   <body>
+    <div class="overlay" id="overlay">Click anywhere to enter</div>
 
-  <div class="overlay" id="overlay">Click anywhere to enter</div>
-
-  <!-- Welcome Screen Only -->
-  <div class="welcome-screen" id="welcome-screen">
-    <div style="display: flex;flex-direction: column;align-items: center;">
-      <div>Welcome</div>
-      <div>to my digital</div>
-      <div>business card</div>
-      <div><img id="logo" src="Assets/LovinsLogo.png" width="200" alt="Lovins Logo"></div>
+    <!-- Welcome Screen Only -->
+    <div class="welcome-screen" id="welcome-screen">
+      <div style="display: flex;flex-direction: column;align-items: center;">
+        <div>Welcome</div>
+        <div>to my digital</div>
+        <div>business card</div>
+        <div><img id="logo" src="Assets/LovinsLogo.png" width="200" alt="Lovins Logo"></div>
+      </div>
+      <div id="cloud-container" class="cloud-container">
+        <div class="cloud halftone" style="top: 10%; left: -100px; background-image: url('Assets/Cloud1.png');animation-delay: 5s;"></div>
+        <div class="cloud halftone" style="top: 25%; left: -100px; background-image: url('Assets/Cloud4.png');"></div>
+        <div class="cloud halftone" style="top: 45%; left: -100px; background-image: url('Assets/Cloud5.png');animation-delay: 3s;"></div>
+        <div class="cloud halftone" style="top: 65%; left: -100px; background-image: url('Assets/Cloud3.png');animation-delay: 2s;"></div>
+        <div class="cloud halftone" style="top: 85%; left: -100px; background-image: url('Assets/Cloud2.png');animation-delay: 4s;"></div>
+      </div>
     </div>
-    <div id="cloud-container" class="cloud-container">
-      <div class="cloud halftone" style="top: 10%; left: -100px; background-image: url('Assets/Cloud1.png');animation-delay: 5s;"></div>
-      <div class="cloud halftone" style="top: 25%; left: -100px; background-image: url('Assets/Cloud4.png');"></div>
-      <div class="cloud halftone" style="top: 45%; left: -100px; background-image: url('Assets/Cloud5.png');animation-delay: 3s;"></div>
-      <div class="cloud halftone" style="top: 65%; left: -100px; background-image: url('Assets/Cloud3.png');animation-delay: 2s;"></div>
-      <div class="cloud halftone" style="top: 85%; left: -100px; background-image: url('Assets/Cloud2.png');animation-delay: 4s;"></div>
-    </div>
-  </div>
+    <!-- Start AR Camera Scene -->
+    <a-scene id="AR-camera" overlay-visibility="" vr-mode-ui="enabled: false;" embedded arjs="sourceType: webcam;" cursor="rayOrigin: mouse" raycaster="objects: .clickable;">
+      
+      <!-- Camera Values -->
+      <a-camera position="0 0 0" look-controls="touchEnabled: false">
+        <a-cursor color="#FF0000" radius="0.02" position="0 0 -1"></a-cursor>
+      </a-camera>
 
-  <!-- Start AR Camera Scene -->
-  <a-scene id="AR-camera" overlay-visibility="" vr-mode-ui="enabled: false;" embedded arjs="sourceType: webcam;" cursor="rayOrigin: mouse" raycaster="objects: .clickable;">
+      <!-- Preload Assets-->
+      <a-assets>
+        <img id="GithubImage" src="Assets/github.png" alt="Github">
+        <img id="LinkedinImage" src="Assets/Linkedin.png" alt="Linkedin">
+        <img id="GmailImage" src="Assets/Gmail.png" alt="Gmail">
+        <img id="#KittyToggle" src="Assets/KittyToggle.png" alt="Toggle">
+      </a-assets>
+
+      <!-- Info -->
+      <a-text value="Jackie Lovins" fontsize="2" position="0 0 2" color="#6C5FA7" width="1.5" height="1.5"></a-text>
+      <a-text id="ar-label" value="Game Dev" fontsize="1" position="0 -1 2" color="#6C5FA7" width="1.5" height="1.5"></a-text>
+      
+      <!-- Links and Toggle -->
+      <a-image src="#GithubImage" position="0 1 -5" scale="0.5 0.5 0.5" class="clickable" id="Github"></a-image>
+      <a-image src="#LinkedinImage" position="0 0 -5" scale="0.5 0.5 0.5" class="clickable" id="Linkedin"></a-image>
+      <a-image src="#GmailImage" position="0 -1 -5" scale="0.5 0.5 0.5" class="clickable" id="Gmail"></a-image>
+      <a-image src="#KittyToggle" position="-1 0 -6" scale="0.4 0.4 0.4" class="clickable" id="Toggle"></a-image>
     
-    <!-- Camera Values -->
-    <a-camera position="0 0 0" look-controls="touchEnabled: false">
-      <a-cursor color="#FF0000" radius="0.02" position="0 0 -1"></a-cursor>
-    </a-camera>
-
-    <!-- Preload Assets-->
-    <a-assets>
-      <img id="GithubImage" src="Assets/github.png" alt="Github">
-      <img id="LinkedinImage" src="Assets/Linkedin.png" alt="Linkedin">
-      <img id="GmailImage" src="Assets/Gmail.png" alt="Gmail">
-      <img id="#KittyToggle" src="Assets/KittyToggle.png" alt="Toggle">
-    </a-assets>
-
-    <!-- Info -->
-    <a-text value="Jackie Lovins" fontsize="2" position="0 0 0" wrap-count="47" color="#6C5FA7" width="1.5" height="1.5"></a-text>
-    <a-text value="Game Dev" fontsize="1" position="0 -1 0" wrap-count="47" color="#6C5FA7" width="1.5" height="1.5"></a-text>
-    
-    <!-- Links and Toggle -->
-    <a-image src="#GithubImage" position="0 1 -5" scale="0.5 0.5 0.5" class="clickable" id="Github"></a-image>
-    <a-image src="#LinkedinImage" position="0 0 -5" scale="0.5 0.5 0.5" class="clickable" id="Linkedin"></a-image>
-    <a-image src="#GmailImage" position="0 -1 -5" scale="0.5 0.5 0.5" class="clickable" id="Gmail"></a-image>
-    <a-image src="#KittyToggle" position="-1 0 -6" scale="0.4 0.4 0.4" class="clickable" id="Toggle"></a-image>
-  
-  </a-scene>
-
-  <div class="a-enter-vr fullscreen" aframe-injected="" style="position: fixed;">
-    <div class="ar-label" id="ar-label" aframe-injected="">Press the kitten to go to Forest</div>
-  </div>
-
+      <a-text value="Press the kitten to go to Forest" fontsize="1" position="0 -1 2" color="#6C5FA7" width="1.5" height="1.5"></a-text>
+    </a-scene>
   </body>
 </html>
