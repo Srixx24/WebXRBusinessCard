@@ -132,7 +132,7 @@ a-scene {
 }
 @font-face {
     font-family: 'TitleFont';
-    src: url('Fonts/Parkinsans-SemiBold.ttf') format('truetype');
+    src: url('https://srixx24.github.io/WebXRBusinessCard/Fonts/Parkinsans-SemiBold.ttf') format('truetype');
 }
 /* Mobile setting could use adusting still, come back later */
 @media (max-width: 600px) {
