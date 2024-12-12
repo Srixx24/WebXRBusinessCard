@@ -1,7 +1,7 @@
 // Sets up all content for project container
 
 document.addEventListener('DOMContentLoaded', () => {  
-    fetch('Json/projectData.json')
+    fetch('Scenes/Json/projectData.json')
         .then(response => response.json())
         .then(data => {
             document.title = data.title; // Set the title
