@@ -1,7 +1,7 @@
 // Sets up link for Bio container
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('Scenes/Json/bioData.json')
+    fetch('Json/bioData.json')
         .then(response => response.json())
         .then(data => {
             const scene = document.querySelector('a-scene');
