@@ -34,7 +34,7 @@
     <a-sound src="url(https://srixx24.github.io/WebXRBusinessCard/Packages/Elements/Fairy Dust.wav)" autoplay="true" loop="true" volume="1.0"></a-sound>
       
     <!-- User controls/position -->
-    <a-camera position="0 1.6 2" look-controls="">
+    <a-camera position="0 1.6 0" look-controls="">
       <a-cursor></a-cursor>
     </a-camera>
   
@@ -65,8 +65,29 @@
 
   <!-- Toggle -->
   <div class="a-enter-vr fullscreen" aframe-injected="" style="position: fixed;">
-    <div id="ar-toggle" class="ar-toggle">
-      <button onclick="MoveToAR()">Move to AR</button>
+    <div id="ar-toggle" class="ar-toggle" style="
+      background: #6C5FA7;
+      opacity: 1;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: baseline;
+      font-size: 1em;
+      margin-right: 30%;
+      margin-left: 30%;">
+      <button onclick="MoveToAR()" style="
+      color: #B24968;
+      background: #2f9899;
+      opacity: 1;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: baseline;
+      font-size: 2em;
+      font-family: Parkinsans, sans-serif;
+      font-weight: 150;">Move to AR</button>
     </div>
   </div>
   <script>
