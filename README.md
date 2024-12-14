@@ -29,8 +29,13 @@
 <ul><li>Upon entering the website the user will be asked for the use of their camera, if on a mobile device, they will also be asked for the use of motion sensors.</li>
 <li>After confirmation, the user will load into the landing page. This allows background scripts and scenes to load while also providing an aesthetically pleasing visual.</li>
 <li>A "Click to Enter" is the user's confirmation to move forward into the experience. From there the AR scene is loaded with my business card, links to my LinkedIn, Github, and
-Email is to the left. To the right is a kitten which will take the user to the VR forest scene.</li>
-<li>The user can move the view with the mouse and with the camera itself. When the mouse/cursor hovers over a clickable item it turns green. All links are opened in a new tab except the VR forest.</li>
+Email is to the left.</li>
+<li>The user can move the view with the mouse and with the camera itself. When the mouse/cursor hovers over a clickable item it turns green.</li>
+<li>The mouse/cursor is controlled with touch/tap in the AR scene. All links are opened in a new tab except the VR forest.</li>
+<li>To the right of my name and title is a kitten which will take the user to the VR forest scene.</li>
+<li>Just like the AR scene, all links are opened in new tabs, however, there is a major change in this experience the user should note. The mouse/cursor is controlled with *Gaze Control* in the VR forest scene.</li>
+<li>To sum up the Gaze control; the user must put the cursor on the clickable object, keep their head straight while maintaining the cursor on the object, and then nod forward to click.</li>
+<li>I understand this can be a bit cumbersome but I wanted to first try to implement this type of input in WebXR as I've had experience and success doing so in Unity with ARCore. And second I thought it would be fun to have a little quirkiness in the VR bit since I was going off the path here anyway.</li>
 <li>After entering the VR forest, the user will see three animated rings within a forest at night.</li>
 <li>The middle is the pink ring that contains my bio and a link to my resume.</li>
 <li>To the left is the orange ring that contains four of my project highlights with links to their Github repos.</li>
