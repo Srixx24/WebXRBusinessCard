@@ -13,7 +13,7 @@
 ## This is my take on a project requiring my class to create a reimagined version of our business cards hosted through WebXR, thus creating an innovative and engaging way to present my professional information. Through this journey, I learned much about developing web-based AR and VR experiences using WebXR, three.js, and A-Frame. 
 
 <br>
-<h3 align="center">The Journey</h3>
+<h3 align="center">🌟 The Journey 🌟</h3>
 
   To start I wanted to build on what I already knew about ARCore in Unity and started researching WebXR from there. Thankfully with my prior experience, it gave me a solid place to work from. Unlike Unity, where everything is mostly built-in or easily accessible, WebXR is more like herding cats when gathering resources. Initially, I had planned to build exclusively in three.js but after further research I found it might be difficult to build for iOS. A suggestion from my instruction sent me searching in the direction of A-Frame and that is what my project is mostly built in. 
 
@@ -23,7 +23,7 @@
 
 ##
 
-### How to Use:
+### 🌟 How to Use 🌟
 <details>
 <summary>Start by scanning the QR code below and follow this quick guide⤵️</summary>
 <ul><li>Upon entering the website the user will be asked for the use of their camera, if on a mobile device, they will also be asked for the use of motion sensors.</li>
@@ -42,6 +42,6 @@ Email is to the left. To the right is a kitten which will take the user to the V
 
 ---
 
-<p align="center">View my business card yourself by scanning my QR code!
+<p align="center">🌟 View my business card yourself by scanning my QR code! 🌟
   <br>
   <a href='https://me-qr.com' border='0' style='cursor:pointer;display:block'><img src='https://cdn3.me-qr.com/qr/146262248.png?v=1733503467' alt='Create qr code for free'></a><a href='https://me-qr.com' border='0' style='cursor:default;display:none'></a></p> 
