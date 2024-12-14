@@ -45,3 +45,59 @@ Email is to the left. To the right is a kitten which will take the user to the V
 <p align="center">🌟 View my business card yourself by scanning my QR code! 🌟
   <br>
   <a href='https://me-qr.com' border='0' style='cursor:pointer;display:block'><img src='https://cdn3.me-qr.com/qr/146262248.png?v=1733503467' alt='Create qr code for free'></a><a href='https://me-qr.com' border='0' style='cursor:default;display:none'></a></p> 
+
+---
+<h2 align="center">🌟 ScreenShots 🌟</h2>
+
+
+<h3 align="center">🌟 Mobile Version 🌟</h3>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5687360e-504b-4384-909f-0fe2786676d6" alt="Mobile WebXR Screenshot 1" width="300">
+  <img src="https://github.com/user-attachments/assets/5551ed3e-73aa-4fc1-a7ff-5b3e1ba69e67" alt="Mobile WebXR Screenshot 2" width="300">
+  <img src="https://github.com/user-attachments/assets/8022be80-0e2d-4d2c-b458-82d74955b9eb" alt="Mobile WebXR Screenshot 4" width="300">
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6df4d773-50fa-40d0-aa0c-cf5f0663a3f7" alt="Mobile WebXR Screenshot 5" width="300">
+  <img src="https://github.com/user-attachments/assets/6c73ee7b-f8a6-43c5-8cfc-4961c7bcf9e7" alt="Mobile WebXR Screenshot 6" width="300">
+  <img src="https://github.com/user-attachments/assets/4a116387-0112-4168-a410-91b9f611871d" alt="Mobile WebXR Screenshot 7" width="300">
+</p>
+
+---
+
+
+<h3 align="center">🌟 Desktop 🌟</h3>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3f063e16-ad7f-4321-b8d2-0d198839c845" width="300">
+  <img src="https://github.com/user-attachments/assets/b8247028-59b6-4f6e-b39d-f232ae27b0d6" width="300">
+  <img src="https://github.com/user-attachments/assets/031742a2-229a-4373-91ae-00de038e71c9" width="300">
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5f70c5c8-278b-4b29-b384-f3f0e8d1876c" width="300">
+  <img src="https://github.com/user-attachments/assets/beb9c7ce-fce0-4082-acf4-23a757b5aa85" width="300">
+  <img src="https://github.com/user-attachments/assets/07358bea-1b51-4bfe-8480-13c740f26bb4" width="300">
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/db3804c9-cae9-4e32-885a-edcb9f6bee3b" width="300">
+  <img src="https://github.com/user-attachments/assets/cc1ee9d6-cb74-45b1-9ba8-9b43ef91defb" width="300">
+  <img src="https://github.com/user-attachments/assets/a204a7cf-63c1-4d37-bddb-860a0bd0adb6" width="300">
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4f470bc3-522a-452f-88dd-15e7dd0f06a0" width="300">
+  <img src="https://github.com/user-attachments/assets/5987ff05-07f2-41de-acb9-6f6ab9eac1e8" width="300">
+  <img src="https://github.com/user-attachments/assets/142876c4-790d-468a-9c60-98a99811f77d" width="300">
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f5e8e837-a602-4f39-b584-8cbc60e97a2e" width="300">
+  <img src="https://github.com/user-attachments/assets/c56bf2d6-4a6c-4c13-8991-bdce8e0f7e6a" width="300">
+  <img src="https://github.com/user-attachments/assets/1b56e44b-d9f8-4fba-a956-f906c3d4ac2c" width="300">
+</p>
+
+
+---
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/abfe108f-c925-4da0-ab2e-d857ede7ebbc">
+</p>
+
