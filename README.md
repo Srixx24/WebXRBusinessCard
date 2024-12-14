@@ -1,4 +1,4 @@
-![WebXR_Business_Card_ReImagined Banner](https://github.com/user-attachments/assets/a8a098dd-9a03-4025-a2f9-613f1e673067)
+![WebXR_Business_Card_ReImagined BannerG](https://github.com/user-attachments/assets/0e53e026-b4f7-4bb5-8956-6b75f0b90854)
 
 ![Static Badge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![Static Badge](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
