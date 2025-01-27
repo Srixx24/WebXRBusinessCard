@@ -47,7 +47,7 @@ Email is to the left.</li>
 
 ---
 
-<p align="center">🌟 View my business card yourself by scanning my QR code! 🌟
+<p align="center">🌟 View my business card yourself by scanning my QR code or use this <a href="https://srixx24.github.io/WebXRBusinessCard/">link</a>! 🌟
   <br>
   <a href='https://me-qr.com' border='0' style='cursor:pointer;display:block'><img src='https://cdn3.me-qr.com/qr/146262248.png?v=1733503467' alt='Create qr code for free'></a><a href='https://me-qr.com' border='0' style='cursor:default;display:none'></a></p> 
 
